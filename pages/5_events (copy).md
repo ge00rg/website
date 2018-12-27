@@ -1,7 +1,7 @@
 --- 
 layout: page
 title : Events2 
-permalink: /events/
+permalink: /events2/
 banner-img: "events_cut_scale.JPG"
 ---
 
