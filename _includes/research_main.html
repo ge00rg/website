@@ -46,7 +46,7 @@ a.head:hover{
     margin-left: 50px;
 }
 @media screen and (max-width: 780px) {
-    .speakerfloat{display: none;}
+    .speakerfloat{margin-left: 30px;}
     .project-text{clear: both;}
 }
   </style>
@@ -127,25 +127,30 @@ $('.author').each(function() {
     var ele = $(this).attr('id').slice(0,-3);
     var type = $(this).attr('id').slice(-3)
     var trigger = ele.concat(dct[type]);
+    var tp = ele.concat(type)
    $(this).hover( function(){
        if (type == 'lnk') {
-           $(this).css('text-decoration', 'underline');
+           <!--$(this).css('text-decoration', 'underline');-->
+	   $("[id='"+tp+"']").css('text-decoration', 'underline');
            $("[id='"+trigger+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
        }
        else {
-            $(this).css({'transform': 'scale(1.5)', 'z-index': '5'});
+            <!--$(this).css({'transform': 'scale(1.5)', 'z-index': '5'});-->
+           $("[id='"+tp+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
            $("[id='"+trigger+"']").css('text-decoration', 'underline');
        }
    },
    function(){
       if (type == 'lnk') {
            $("[id='"+trigger+"']").css({'transform': 'none', 'z-index': '1'});
-            $(this).css('text-decoration', 'none');
+           $("[id='"+tp+"']").css('text-decoration', 'none');
+            <!--$(this).css('text-decoration', 'none');-->
 
        }
        else {
            $("[id='"+trigger+"']").css('text-decoration', 'none');
-            $(this).css({'transform': 'none', 'z-index': '1'});
+           $("[id='"+tp+"']").css({'transform': 'none', 'z-index': '1'});
+            <!--$(this).css({'transform': 'none', 'z-index': '1'});-->
 
        }
    });

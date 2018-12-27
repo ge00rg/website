@@ -225,11 +225,12 @@ header {
          }
      .nav-venn{
         position: relative; 
-        padding-bottom: 200px; 
-        width: 50%; 
-        margin: auto; 
-        top: -80px;
-        left: -150px;
+        padding-bottom: 200px;
+        margin: auto;
+        background-image: url('/assets/img/research/pyram_rot.jpg');
+	background-repeat: no-repeat;
+	background-position-y: -70px;
+	left: 10%;
     }
     .venn{
       padding: 0 0 0 0;
@@ -239,7 +240,7 @@ header {
       transition: 0.1s linear;
     }
     .ellipse{
-      top: 60px; 
+      top: 0px; 
       width: 300px; 
       height: 180px;
     }
@@ -255,7 +256,7 @@ header {
     }
     .inter{
       position: absolute; 
-      top: 78px; 
+      top: 16px; 
       width: 120px;
       opacity: 0;
     }
@@ -276,25 +277,25 @@ header {
     }
     .cat1text{
       left: 100px;
-      top: 80px;
+      top: 20px;
     }
     .cat2text{
       left: 290px;
-      top: 80px;
+      top: 20px;
     }
     .cat3text{
       left: 470px;
-      top: 80px;
+      top: 20px;
     }
     .int1text{
       left: 195px;
-      top: 120px;
+      top: 60px;
       z-index: 6;
       display: none;
     }
     .int2text{
       left: 380px;
-      top: 120px;
+      top: 60px;
       z-index: 6;
       display: none;
     }

@@ -38,7 +38,10 @@ figcaption {
     filter: none;
     -webkit-filter: grayscale(0%);
 }
-/* Display the columns below each other instead of side by side on small screens */
+.alumnipic{
+    border-radius: 15%/5%;
+    width: 100%;
+}
     
 .alumnigrid{
     display: inline-grid;
@@ -49,13 +52,7 @@ figcaption {
     float: left;
     margin-bottom: 10px;
     z-index: 1;
-    transition: transform .2s;
     position: relative;
-}
-    
-.alumnicol:hover {
-    z-index: 5555 !important;
-    transform: scale(1.1);
 }
     
 .alumniname{
@@ -115,7 +112,7 @@ figcaption {
         {% if member.position=="Alumni" %}
             <div class="alumnicol">
                     <figure>
-                            <img class="memberpic" src="{{ site.baseurl }}/assets/img/members/{{ member.img }}">
+                            <img class="alumnipic" src="{{ site.baseurl }}/assets/img/members/{{ member.img }}">
                         <figcaption class="alumniname">{{member.title}}</figcaption>
                     </figure>
                 </div>
