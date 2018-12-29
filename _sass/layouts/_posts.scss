@@ -227,7 +227,7 @@ header {
         position: relative; 
         padding-bottom: 200px;
         margin: auto;
-        background-image: url('{$baseurl}/assets/img/research/pyram_rot.jpg');
+        background-image: url('#{$baseurl}/assets/img/research/pyram_rot.jpg');
 	background-repeat: no-repeat;
 	background-position-y: -70px;
 	left: 10%;
