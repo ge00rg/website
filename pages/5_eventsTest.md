@@ -7,9 +7,11 @@ banner-img: "events_cut_scale.JPG"
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% assign last_year=this_year| minus:1 %}
 
+{% assign talks=site.talks |sort: 'date' %}
+
 <table>
 <tbody>
-    {% for talk in site.talks %}
+    {% for talk in talks %}
 	{% assign talk_year=talk.date|date:'%Y' %}
 	{% assign talk_year=talk_year|plus:0 %}
 	{% if talk_year >= last_year %}
