@@ -43,8 +43,11 @@ banner-img: "events_cut_scale.JPG"
     var current_year = (new Date).getFullYear();
     var end_year = current_year + 10;
     var years_str = {{future_years}};
-    var years = years_str.split(',');
-    alert(years);
+    var years_split;
+    do {
+        years_split.push(years_str.substring(0, 4));
+	} while((years_str = years_str.substring(4, s.length)) != "");
+    alert(years_split);
 	
     var i;
     for (i = end_year; i > current_year; i--) { 
