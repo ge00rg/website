@@ -44,7 +44,7 @@ banner-img: "events_cut_scale.JPG"
     var end_year = current_year + 10;
     var years_str = {{future_years}};
     var years_split = new Array();
-    alert({{future_years}});
+    alert({{future_years}}[0]);
 	
     var i;
     for (i = end_year; i > current_year; i--) { 
