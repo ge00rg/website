@@ -60,10 +60,6 @@ banner-img: "events_cut_scale.JPG"
     });
 </script>
 
-{% if last_year.first %}
-last year is an int
-{% endif %}
-
 
 {% assign talks_rev=site.talks |sort: 'date' %}
 {% assign talks=talks_rev | reverse %}
