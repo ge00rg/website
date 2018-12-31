@@ -16,10 +16,7 @@ acts as int
     {% for talk in site.talks %}
 	{% assign talk_year=talk.date|date:'%Y' %}
 	{% assign talk_year=talk_year|plus:0 %}
-	{% if talk_year >= 2017 %}
-		acts as int
-	{% endif %}
-	{% if talk.year >= last_year %}
+	{% if talk.year >= 2017 %}
 	    <tr><td>{{talk_year}}</td></tr>
 	{% endif %}
     {% endfor %}
