@@ -11,8 +11,10 @@ banner-img: "events_cut_scale.JPG"
 
 <!-- hidden table with all dates to be dsplayed on main page -->
 <table>
-<tbody>
+<thead>
     <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th></tr>
+</thead>
+<tbody>
     {% for talk in talks %}
 	{% assign talk_year=talk.date|date:'%Y' %}
 	{% assign talk_year=talk_year|plus:0 %}
@@ -39,7 +41,7 @@ banner-img: "events_cut_scale.JPG"
 	
     var i;
     for (i = end_year; i > current_year; i--) { 
-        $('#future_events').append("<h2>"+i+"</h2>");    
+        $('#future_events').append("<h3>"+i+"</h3>");    
     }
 </script>
 
