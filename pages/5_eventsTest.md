@@ -43,7 +43,7 @@ banner-img: "events_cut_scale.JPG"
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     var current_year = (new Date).getFullYear();
-    var today = (new Date).getDate();
+    var today = new Date()
     var end_year = current_year + 10;
     var s = {{cur_years}};
     var years_con = s.toString()
