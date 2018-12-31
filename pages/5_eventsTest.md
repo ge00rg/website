@@ -29,7 +29,7 @@ banner-img: "events_cut_scale.JPG"
 		<td>{{talk.affiliation}}</td>
 		<td>{{talk.location}}</td>
 	    </tr>
-	    {% assign future_years=future_years | push: year %}
+	    {% assign future_years=future_years | push: talk_year %}
 	{% endif %}
     {% endfor %}
 </tbody>
