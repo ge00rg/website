@@ -45,10 +45,13 @@ banner-img: "events_cut_scale.JPG"
     var years_str = {{future_years}};
     var years_split = new Array();
     
+    var s = "foofaafoofaafoofaafoofaafoofaa";
+    var a = new Array();
+    var i = 4;
     do {
-        years_split.push(years_str.substring(0, 4));
-	} while((years_str = years_str.substring(4, years_str.length)) != "");
-    alert(years_split);
+        a.push(s.substring(0, i));
+    } while((s = s.substring(i, s.length)) != "");
+    alert(a);
 	
     var i;
     for (i = end_year; i > current_year; i--) { 
