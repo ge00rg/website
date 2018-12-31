@@ -53,6 +53,10 @@ banner-img: "events_cut_scale.JPG"
     alert(years);
 		
     var i;
+    
+    years.reverse().forEach(function(year) {
+      $('#future_events').append("<h3>"+year+"</h3>");    
+    });
     for (i = end_year; i > current_year; i--) { 
         $('#future_events').append("<h3>"+i+"</h3>");    
     }
