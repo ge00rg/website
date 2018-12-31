@@ -6,16 +6,15 @@ banner-img: "events_cut_scale.JPG"
 ---
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% assign last_year=this_year| minus:1 %}
-
-{% if last_year.first %}
-last year is an int
+{{last_year}}
+{% if last_year >= 2015 %}
+acts as int
 {% endif %}
 
 <table>
 <tbody>
     {% for talk in site.talks %}
-	{% assign talk_year_str=talk.date|date:'%Y' %}
-	{% assign talk_year=talk_year_str|minus:0 %}
+	{% assign talk_year=talk.date|date:'%Y' %}
 	{% if talk.year >= last_year %}
 	    <tr><td>{{talk_year}}</td></tr>
 	{% endif %}
