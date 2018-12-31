@@ -59,7 +59,7 @@ banner-img: "events_cut_scale.JPG"
     var test = $(this).find('td:eq(1)').text()
     var test_date = new Date(test);
     future = test_date >= today;
-    alert(today);
+    alert(test_date+" "+today+" "+future);
     });
     
     years.reverse().forEach(function(year) {
