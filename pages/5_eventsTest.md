@@ -47,7 +47,7 @@ banner-img: "events_cut_scale.JPG"
     
     do {
         years_split.push(years_str.substring(0, 4));
-	} while((years_str = years_str.substring(4, s.length)) != "");
+	} while((years_str = years_str.substring(4, years_str.length)) != "");
     alert(years_split);
 	
     var i;
