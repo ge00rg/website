@@ -14,6 +14,8 @@ banner-img: "events_cut_scale.JPG"
 	{% assign talk_year=talk_year_str|minus:0 %}
 	{% if talk.year >= last_year %}
 	    <tr><td>{{talk_year}}</td></tr>
+	{% else %}
+	    talk: {{talk_year}}, last: {{last_year}}
 	{% endif %}
     {% endfor %}
 </tbody>
