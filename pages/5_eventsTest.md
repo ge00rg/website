@@ -56,8 +56,10 @@ banner-img: "events_cut_scale.JPG"
     var i;
     
     years.reverse().forEach(function(year) {
-      $('#events').append("<h3>"+year+"</h3>");
-      $('#events').append("<table class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>");    
+      if(year <= current_year){
+          $('#events').append("<h3>"+year+"</h3>");
+          $('#events').append("<table id='' class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>"); 
+	  }
     });
 </script>
 
