@@ -42,8 +42,8 @@ banner-img: "events_cut_scale.JPG"
 <script>
     var current_year = (new Date).getFullYear();
     var end_year = current_year + 10;
-    var years = '{{future_years}}';
-    alert(future_years}};
+    var years = {{future_years}};
+    alert(years);
 	
     var i;
     for (i = end_year; i > current_year; i--) { 
