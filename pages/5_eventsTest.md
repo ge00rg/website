@@ -11,7 +11,9 @@ banner-img: "events_cut_scale.JPG"
 <tbody>
     {% for talk in site.talks %}
 	{% assign talk_year=talk.date|date:'%Y' %}
-	<tr><td>{{talk_year}}</td></tr>
+	{% if talk.year >= last_year %}
+	    <tr><td>{{talk_year}}</td></tr>
+	{% endif %}
     {% endfor %}
 </tbody>
 </table>
