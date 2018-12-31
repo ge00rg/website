@@ -42,11 +42,15 @@ banner-img: "events_cut_scale.JPG"
 <script>
     var current_year = (new Date).getFullYear();
     var end_year = current_year + 10;
-    var years_str = {{future_years}};
-    var years_split = new Array();
-	
-    alert(typeof years_str);
-	
+    var years_con = {{future_years}}.toString();
+    var years = new Array();
+    
+    var i = 4;
+    do {
+        years.push(years_con.substring(0, i));
+        } while((years_con = years_con.substring(i, years_con.length)) != "");
+    alert(years);
+		
     var i;
     for (i = end_year; i > current_year; i--) { 
         $('#future_events').append("<h3>"+i+"</h3>");    
