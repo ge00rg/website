@@ -28,14 +28,13 @@ banner-img: "events_cut_scale.JPG"
     {% endfor %}
 </tbody>
 </table>
-a
 <p id="curyear">current year: </p>
-a
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    var currentYear = (new Date).getFullYear();
-    $("#curyear").text(currentYear);
+    var current_year = (new Date).getFullYear();
+    var end_year = current_year + 10;
+    $("#curyear").text(end_year);
 </script>
 
 {% if last_year.first %}
