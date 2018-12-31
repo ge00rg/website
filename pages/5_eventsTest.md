@@ -45,8 +45,6 @@ banner-img: "events_cut_scale.JPG"
     var s = {{future_years}};
     var years_con = s.toString()
     var years = new Array();
-	alert(years_con);
-	alert(typeof years_con);
     
     var i = 4;
     do {
