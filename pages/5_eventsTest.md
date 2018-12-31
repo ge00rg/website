@@ -4,6 +4,8 @@ title : Events2
 permalink: /events2/
 banner-img: "events_cut_scale.JPG"
 ---
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{{this_year}}
 
 {% assign talks_rev=site.talks |sort: 'date' %}
 {% assign talks=talks_rev | reverse %}
