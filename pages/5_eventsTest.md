@@ -36,7 +36,9 @@ banner-img: "events_cut_scale.JPG"
 </table>
 {% assign future_years=future_years|uniq %}
 
-<div id="future_events"></div>
+<div id="future_events">
+    <h2>Upcoming Events</h2>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
