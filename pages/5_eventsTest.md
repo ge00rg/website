@@ -9,6 +9,7 @@ banner-img: "events_cut_scale.JPG"
 
 {% assign talks=site.talks |sort: 'date' %}
 
+<!-- hidden table with all dates to be dsplayed on main page -->
 <table>
 <tbody>
     {% for talk in talks %}
@@ -22,12 +23,18 @@ banner-img: "events_cut_scale.JPG"
 		<td>{{talk.speaker}}</td>
 		<td>{{talk.affiliation}}</td>
 		<td>{{talk.location}}</td>
-
 	    </tr>
 	{% endif %}
     {% endfor %}
 </tbody>
 </table>
+<p id="curyear">current year: </p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    var currentYear = (new Date).getFullYear();
+    $("#curyear").text(currentYear);
+</script>
 
 {% if last_year.first %}
 last year is an int
