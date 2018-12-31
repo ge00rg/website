@@ -37,6 +37,7 @@ banner-img: "events_cut_scale.JPG"
 {% assign cur_years=cur_years|uniq %}
 
 <div id="events">
+	<h2>Past Events</h2>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
