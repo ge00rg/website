@@ -9,7 +9,7 @@ banner-img: "events_cut_scale.JPG"
 
 <table>
 <tbody>
-    {% for talk in talks %}
+    {% for talk in site.talks %}
 	{% assign talk_year=talk.date|date:'%Y' %}
 	<tr><td>{{talk_year}}</td></tr>
     {% endfor %}
