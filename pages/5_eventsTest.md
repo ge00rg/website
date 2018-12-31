@@ -54,13 +54,15 @@ banner-img: "events_cut_scale.JPG"
         years.push(years_con.substring(0, i));
         } while((years_con = years_con.substring(i, years_con.length)) != "");
 		
-    var j;
+    var j = 0;
     $('#cur_data tbody tr').each(function(){
     var test = $(this).find('td:eq(1)').text()
     var test_date = new Date(test);
     future = test_date >= today;
-    alert(test_date+" "+today+" "+future);
+    if (future == true){return false}
+    j += 1
     });
+    alert(j);
     
     years.reverse().forEach(function(year) {
       if(year <= current_year){
