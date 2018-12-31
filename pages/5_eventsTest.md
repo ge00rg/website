@@ -57,9 +57,6 @@ banner-img: "events_cut_scale.JPG"
     years.reverse().forEach(function(year) {
       $('#future_events').append("<h3>"+year+"</h3>");    
     });
-    for (i = end_year; i > current_year; i--) { 
-        $('#future_events').append("<h3>"+i+"</h3>");    
-    }
 </script>
 
 {% if last_year.first %}
