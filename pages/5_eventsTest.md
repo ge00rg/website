@@ -7,6 +7,10 @@ banner-img: "events_cut_scale.JPG"
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% assign last_year=this_year| minus:1 %}
 
+{% if last_year.first %}
+last year is an int
+{% endif %}
+
 <table>
 <tbody>
     {% for talk in site.talks %}
@@ -14,12 +18,18 @@ banner-img: "events_cut_scale.JPG"
 	{% assign talk_year=talk_year_str|minus:0 %}
 	{% if talk.year >= last_year %}
 	    <tr><td>{{talk_year}}</td></tr>
-	{% else %}
-	    talk: {{talk_year}}, last: {{last_year}}
+	{% endif %}
+	{% if last_year.first %}
+	    talk_year year is an int
 	{% endif %}
     {% endfor %}
 </tbody>
 </table>
+
+{% if last_year.first %}
+last year is an int
+{% endif %}
+
 
 {% assign talks_rev=site.talks |sort: 'date' %}
 {% assign talks=talks_rev | reverse %}
