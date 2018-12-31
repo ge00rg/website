@@ -54,20 +54,19 @@ banner-img: "events_cut_scale.JPG"
         years.push(years_con.substring(0, i));
         } while((years_con = years_con.substring(i, years_con.length)) != "");
 		
-    var j = 0;
+    var first_future_talk = 0;
     $('#cur_data tbody tr').each(function(){
     var test = $(this).find('td:eq(1)').text()
     var test_date = new Date(test);
     future = test_date >= today;
     if (future == true){return false}
-    j += 1
+    first_future_talk += 1
     });
-    alert(j);
     
     years.reverse().forEach(function(year) {
       if(year <= current_year){
           $('#events').append("<h3>"+year+"</h3>");
-          $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>"); 
+          $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'></table>");
 	  }
     });
 </script>
