@@ -55,8 +55,9 @@ banner-img: "events_cut_scale.JPG"
         } while((years_con = years_con.substring(i, years_con.length)) != "");
 		
     var j;
-    $('#cur_data tr').each(function(){
-    alert('asd');
+    $('#cur_data tbody tr').each(function(){
+    var test = $(this).find('td:eq(4)').text()
+    alert(test);
 	});
     
     years.reverse().forEach(function(year) {
