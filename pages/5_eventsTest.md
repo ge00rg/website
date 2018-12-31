@@ -6,7 +6,15 @@ banner-img: "events_cut_scale.JPG"
 ---
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% assign last_year=this_year| minus:1 %}
-{{last_year}}
+
+<table>
+<tbody>
+    {% for talk in talks %}
+	{% assign talk_year=talk.date|date:'%Y' %}
+	<tr><td>{{talk_year}}</td></tr>
+    {% endfor %}
+</tbody>
+</table>
 
 {% assign talks_rev=site.talks |sort: 'date' %}
 {% assign talks=talks_rev | reverse %}
