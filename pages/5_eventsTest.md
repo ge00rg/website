@@ -50,7 +50,6 @@ banner-img: "events_cut_scale.JPG"
     do {
         years.push(years_con.substring(0, i));
         } while((years_con = years_con.substring(i, years_con.length)) != "");
-    alert(years);
 		
     var i;
     
