@@ -12,6 +12,7 @@ banner-img: "events_cut_scale.JPG"
 <!-- hidden table with all dates to be dsplayed on main page -->
 <table>
 <tbody>
+    <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th></tr>
     {% for talk in talks %}
 	{% assign talk_year=talk.date|date:'%Y' %}
 	{% assign talk_year=talk_year|plus:0 %}
