@@ -9,6 +9,8 @@ banner-img: "events_cut_scale.JPG"
 
 {% assign talks=site.talks |sort: 'date' %}
 
+{% assign future_years=""| split: "," %}
+
 <!-- hidden table with all dates to be dsplayed on main page -->
 <table id="future_data">
 <thead>
@@ -27,10 +29,13 @@ banner-img: "events_cut_scale.JPG"
 		<td>{{talk.affiliation}}</td>
 		<td>{{talk.location}}</td>
 	    </tr>
+	    {% assign future_years=future_years | push: year %}
 	{% endif %}
     {% endfor %}
 </tbody>
 </table>
+{% assign future_years=future_years|uniq %}
+{{future_years}}
 
 <div id="future_events"></div>
 
