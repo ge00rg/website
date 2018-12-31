@@ -35,7 +35,6 @@ banner-img: "events_cut_scale.JPG"
 </tbody>
 </table>
 {% assign future_years=future_years|uniq %}
-{{future_years}}
 
 <div id="future_events"></div>
 
@@ -43,12 +42,8 @@ banner-img: "events_cut_scale.JPG"
 <script>
     var current_year = (new Date).getFullYear();
     var end_year = current_year + 10;
-	
-    var years = new Array();
-    $("#future_data tr td:nth-child(1)").each(function(i){
-       years.push($(this).text());
-    });
-        alert(years);
+    var years = {{future_years}};
+    alert(future_years}};
 	
     var i;
     for (i = end_year; i > current_year; i--) { 
