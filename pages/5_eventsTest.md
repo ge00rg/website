@@ -15,11 +15,11 @@ acts as int
 <tbody>
     {% for talk in site.talks %}
 	{% assign talk_year=talk.date|date:'%Y' %}
+	{% if talk_year >= 2015 %}
+		acts as int
+	{% endif %}
 	{% if talk.year >= last_year %}
 	    <tr><td>{{talk_year}}</td></tr>
-	{% endif %}
-	{% if last_year.first %}
-	    talk_year year is an int
 	{% endif %}
     {% endfor %}
 </tbody>
