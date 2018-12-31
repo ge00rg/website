@@ -59,8 +59,8 @@ banner-img: "events_cut_scale.JPG"
     var test = $(this).find('td:eq(1)').text()
     var test_date = new Date(test);
     future = test_date >= today;
-    alert("talk date: "+test+ " today: "+today+" logic: "+future);
-	});
+    alert(today);
+    });
     
     years.reverse().forEach(function(year) {
       if(year <= current_year){
