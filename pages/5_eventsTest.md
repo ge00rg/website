@@ -10,7 +10,7 @@ banner-img: "events_cut_scale.JPG"
 {% assign talks=site.talks |sort: 'date' %}
 
 <!-- hidden table with all dates to be dsplayed on main page -->
-<table>
+<table id="future_data">
 <thead>
     <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th></tr>
 </thead>
@@ -38,6 +38,12 @@ banner-img: "events_cut_scale.JPG"
 <script>
     var current_year = (new Date).getFullYear();
     var end_year = current_year + 10;
+	
+    var years = new Array();
+    $("#future_data tr td:nth-child(1)").each(function(i){
+       years.push($(this).text());
+    });
+        alert(years);
 	
     var i;
     for (i = end_year; i > current_year; i--) { 
