@@ -9,10 +9,10 @@ banner-img: "events_cut_scale.JPG"
 
 {% assign talks=site.talks |sort: 'date' %}
 
-{% assign future_years=""| split: "," %}
+{% assign cur_years=""| split: "," %}
 
 <!-- hidden table with all dates to be dsplayed on main page -->
-<table id="future_data">
+<table id="cur_data">
 <thead>
     <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th></tr>
 </thead>
@@ -29,22 +29,21 @@ banner-img: "events_cut_scale.JPG"
 		<td>{{talk.affiliation}}</td>
 		<td>{{talk.location}}</td>
 	    </tr>
-	    {% assign future_years=future_years | push: talk_year %}
+	    {% assign cur_years=cur_years | push: talk_year %}
 	{% endif %}
     {% endfor %}
 </tbody>
 </table>
-{% assign future_years=future_years|uniq %}
+{% assign cur_years=cur_years|uniq %}
 
-<div id="future_events">
-    <h2>Upcoming Events</h2>
+<div id="events">
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     var current_year = (new Date).getFullYear();
     var end_year = current_year + 10;
-    var s = {{future_years}};
+    var s = {{cur_years}};
     var years_con = s.toString()
     var years = new Array();
     
@@ -56,7 +55,7 @@ banner-img: "events_cut_scale.JPG"
     var i;
     
     years.reverse().forEach(function(year) {
-      $('#future_events').append("<h3>"+year+"</h3>");    
+      $('#events').append("<h3>"+year+"</h3>");    
     });
 </script>
 
