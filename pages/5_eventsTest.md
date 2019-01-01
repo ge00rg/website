@@ -75,7 +75,6 @@ banner-img: "events_cut_scale.JPG"
     "August", "September", "October",
     "November", "December"
     ];
-    alert(monthNames);
     
     var year;
     var date;
@@ -99,10 +98,8 @@ banner-img: "events_cut_scale.JPG"
 	      loc = cells[5].innerHTML;
 	      
 	      dt_obj = new Date(dt);
-	      alert(dt_obj);
 	      day = dt_obj.getDate();
-	      alert(day);
-  	      mon = monthNames[date.getMonth()];
+  	      mon = monthNames[dt_obj.getMonth()];
 	      alert(mon);
 	      
 	      if (year < year_old){
