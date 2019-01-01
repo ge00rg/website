@@ -71,6 +71,7 @@ banner-img: "events_cut_scale.JPG"
 	  while(j > 10){
 	       var a = $('#cur_data').find('tbody').find('tr:nth-child(' + j +')');
 	       alert(a);
+	       j -= 1;
 	  }
 	  }
     });
