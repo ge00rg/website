@@ -74,7 +74,7 @@ banner-img: "events_cut_scale.JPG"
 	      year = cells[0].innerHTML;
 	      if (year != year_old){
 	          $('#events').append("<h3>"+year+"</h3>");
-                  $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'></table>");
+                  $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>");
 	          year_old = year;
 	      }
 	      j -= 1;
