@@ -50,11 +50,6 @@ banner-img: "events_cut_scale.JPG"
     first_future_talk += 1
     });
     
-    var j = first_future_talk;
-    var table = document.getElementById("cur_data");
-    var cells;
-    var year_old = table.rows[j].cells[0].innerHTML + 1;
-    
     var monthNames = [
     "January", "February", "March",
     "April", "May", "June", "July",
@@ -74,6 +69,38 @@ banner-img: "events_cut_scale.JPG"
     var day;
     var mon;
     
+    var table = document.getElementById("cur_data");
+    var cells;
+    
+    var j = first_future_talk + 1;
+    var year_old = 0;
+    while(j < table.rows.length ){
+	      cells = table.rows[j].cells;
+	      year = cells[0].innerHTML;
+	      dt = cells[1].innerHTML;
+	      ttl = cells[2].innerHTML;
+	      spkr = cells[3].innerHTML;
+	      aff = cells[4].innerHTML;
+	      loc = cells[5].innerHTML;
+	      con = cells[6].innerHTML;
+	      
+	      dt_obj = new Date(dt);
+	      day = dt_obj.getDate();
+  	      mon = monthNames[dt_obj.getMonth()];
+	      
+	      if (year > year_old){
+	          table_handle = 'future_'+year;
+	          $('#events').append("<h3>"+year+"</h3>");
+                  $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;'></table>");
+	          year_old = year;
+	      }
+	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
+	      j += 1;
+	  }
+    
+    j = first_future_talk;
+    year_old = table.rows[j].cells[0].innerHTML + 1;
+    
     while(j >= 1){
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
@@ -87,7 +114,6 @@ banner-img: "events_cut_scale.JPG"
 	      dt_obj = new Date(dt);
 	      day = dt_obj.getDate();
   	      mon = monthNames[dt_obj.getMonth()];
-	      alert(mon);
 	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
