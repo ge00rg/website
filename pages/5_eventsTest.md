@@ -12,7 +12,7 @@ banner-img: "events_cut_scale.JPG"
 <!-- hidden table with all dates to be dsplayed on main page -->
 <table id="cur_data" style="display: none;">
 <thead>
-    <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th><th>content</th></tr>
+    <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th><th>content</th><th>url</th></tr>
 </thead>
 <tbody>
     {% for talk in talks %}
@@ -27,6 +27,7 @@ banner-img: "events_cut_scale.JPG"
 		<td>{{talk.affiliation}}</td>
 		<td>{{talk.location}}</td>
 		<td>{{talk.content|strip_html|truncate:170}}</td>
+		<td>{{ talk.url | prepend: site.baseurl }}</td>
 	    </tr>
 	{% endif %}
     {% endfor %}
@@ -83,6 +84,7 @@ banner-img: "events_cut_scale.JPG"
 	      aff = cells[4].innerHTML;
 	      loc = cells[5].innerHTML;
 	      con = cells[6].innerHTML;
+	      urll = cells[7].innerHTML;
 	      
 	      dt_obj = new Date(dt);
 	      day = dt_obj.getDate();
@@ -94,7 +96,7 @@ banner-img: "events_cut_scale.JPG"
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;display: table!important;'></table>");
 	          year_old = year;
 	      }
-	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
+	      $('#'+table_handle).append("<tr onclick='location.href='"+urll+"'><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
 	      j += 1;
 	  }
     
