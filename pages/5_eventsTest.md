@@ -81,6 +81,7 @@ banner-img: "events_cut_scale.JPG"
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>");
 	          year_old = year;
 	      }
+	      $('#'+table_handle).append("<tr><td>"+year+"</td></tr>");
 	      j -= 1;
 	  }
     <!--
