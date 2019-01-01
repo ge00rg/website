@@ -81,11 +81,11 @@ banner-img: "events_cut_scale.JPG"
     while(j >= 1){
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
-	      date = cells[1].innerHTML;
-	      title = cells[2].innerHTML;
-	      speaker = cells[3].innerHTML;
-	      affiliation = cells[4].innerHTML;
-	      location = cells[5].innerHTML;
+	      dt = cells[1].innerHTML;
+	      ttl = cells[2].innerHTML;
+	      spkr = cells[3].innerHTML;
+	      aff = cells[4].innerHTML;
+	      loc = cells[5].innerHTML;
 	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
@@ -93,6 +93,7 @@ banner-img: "events_cut_scale.JPG"
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;'></table>");
 	          year_old = year;
 	      }
+	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b></td></tr>");
 	      j -= 1;
 	  }
     <!--
