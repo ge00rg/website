@@ -87,9 +87,7 @@ banner-img: "events_cut_scale.JPG"
 	      aff = cells[4].innerHTML;
 	      loc = cells[5].innerHTML;
 	      
-	      alert(dt);
-	      tst = new Date(dt);
-	      alert(tst);
+	      dt_obj = new Date(dt);
 	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
@@ -97,7 +95,7 @@ banner-img: "events_cut_scale.JPG"
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;'></table>");
 	          year_old = year;
 	      }
-	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+date+"</span></td></tr>");
+	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+dt_obj+"</span></td></tr>");
 	      j -= 1;
 	  }
     <!--
