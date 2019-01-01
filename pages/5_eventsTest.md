@@ -43,18 +43,7 @@ banner-img: "events_cut_scale.JPG"
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    var current_year = (new Date).getFullYear();
     var today = new Date()
-    var end_year = current_year + 10;
-    var s = {{cur_years}};
-    var years_con = s.toString()
-    var years = new Array();
-    <!--
-    var i = 4;
-    do {
-        years.push(years_con.substring(0, i));
-        } while((years_con = years_con.substring(i, years_con.length)) != "");
-    -->
 		
     var first_future_talk = 0;
     $('#cur_data tbody tr').each(function(){
@@ -113,22 +102,6 @@ banner-img: "events_cut_scale.JPG"
 	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
 	      j -= 1;
 	  }
-    <!--
-    years.reverse().forEach(function(year) {
-      if(year <= current_year){
-          $('#events').append("<h3>"+year+"</h3>");
-          $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'></table>");
-	  var j = first_future_talk - 1;
-	  
-	  var table = document.getElementById("cur_data");
-	  var cells;
-	  while(j > 7){
-	      cells = table.rows[j].cells;
-	      j -= 1;
-	  }
-	  }
-    });
-    -->
 </script>
 
 
