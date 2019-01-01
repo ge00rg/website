@@ -67,11 +67,16 @@ banner-img: "events_cut_scale.JPG"
     var j = first_future_talk - 1;
     var table = document.getElementById("cur_data");
     var cells;
+    var year_old = table.rows[j].cells[0].innerHTML - 1;
     
     while(j >= 0){
 	      cells = table.rows[j].cells;
-	      year = cells[0].innerHTML
-	      if (year == 2018){alert(year);}
+	      year = cells[0].innerHTML;
+	      if (year != year_old){
+	          $('#events').append("<h3>"+year+"</h3>");
+                  $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'></table>");
+	          year_old = year;
+	      }
 	      j -= 1;
 	  }
     <!--
