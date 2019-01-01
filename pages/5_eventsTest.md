@@ -12,7 +12,7 @@ banner-img: "events_cut_scale.JPG"
 {% assign cur_years=""| split: "," %}
 
 <!-- hidden table with all dates to be dsplayed on main page -->
-<table id="cur_data">
+<table id="cur_data" style="display: none;">
 <thead>
     <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th><th>content</th></tr>
 </thead>
