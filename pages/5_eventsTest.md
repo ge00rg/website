@@ -69,6 +69,13 @@ banner-img: "events_cut_scale.JPG"
     var cells;
     var year_old = table.rows[j].cells[0].innerHTML + 1;
     
+    var monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+    ];
+    
     var year;
     var date;
     var title;
@@ -88,6 +95,9 @@ banner-img: "events_cut_scale.JPG"
 	      loc = cells[5].innerHTML;
 	      
 	      dt_obj = new Date(dt);
+	      var day = date.getDate();
+  	      var mon = monthNames[date.getMonth()];
+              var yr = date.getFullYear();
 	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
@@ -95,7 +105,7 @@ banner-img: "events_cut_scale.JPG"
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;'></table>");
 	          year_old = year;
 	      }
-	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+dt_obj+"</span></td></tr>");
+	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+mon+" "+day+", "+year+"</span></td></tr>");
 	      j -= 1;
 	  }
     <!--
