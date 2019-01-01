@@ -68,6 +68,8 @@ banner-img: "events_cut_scale.JPG"
           $('#events').append("<h3>"+year+"</h3>");
           $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'></table>");
 	  var j = first_future_talk - 1;
+	  
+	  var row;
 	  while(j > 3){
 	      var table = document.getElementById("cur_data");
 	      row = table.rows[j];
