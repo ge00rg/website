@@ -68,10 +68,7 @@ banner-img: "events_cut_scale.JPG"
           $('#events').append("<h3>"+year+"</h3>");
           $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'></table>");
 	  var j = first_future_talk - 1;
-	  while(j > 10){
-	       alert(j);
-	       j -= 1;
-	  }
+	  alert(j);
 	  }
     });
 </script>
