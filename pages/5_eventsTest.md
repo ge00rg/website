@@ -71,7 +71,7 @@ banner-img: "events_cut_scale.JPG"
 	  
 	  var table = document.getElementById("cur_data");
 	  var cells;
-	  while(j > 3){
+	  while(j > 7){
 	      cells = table.rows[j].cells;
 	      alert(cells[0].innerHtml);
 	  }
