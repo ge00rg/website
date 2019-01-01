@@ -71,10 +71,10 @@ banner-img: "events_cut_scale.JPG"
     var year;
     
     while(j >= 0){
-    alert(year);
-    alert(year_old);
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
+	      alert(year);
+    		alert(year_old);
 	      if (year != year_old){
 	          $('#events').append("<h3>"+year+"</h3>");
                   $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>");
@@ -93,7 +93,6 @@ banner-img: "events_cut_scale.JPG"
 	  var cells;
 	  while(j > 7){
 	      cells = table.rows[j].cells;
-	      alert(cells[0].innerHTML);
 	      j -= 1;
 	  }
 	  }
