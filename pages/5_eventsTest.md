@@ -99,7 +99,9 @@ banner-img: "events_cut_scale.JPG"
 	      
 	      dt_obj = new Date(dt);
 	      day = date.getDate();
+	      alert(day);
   	      mon = monthNames[date.getMonth()];
+	      alert(mon);
 	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
