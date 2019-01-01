@@ -71,6 +71,8 @@ banner-img: "events_cut_scale.JPG"
     var year;
     
     while(j >= 0){
+    alert(year);
+    alert(year_old);
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
 	      if (year != year_old){
