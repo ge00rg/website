@@ -85,6 +85,9 @@ banner-img: "events_cut_scale.JPG"
     
     var table_handle;
     
+    var day;
+    var mon;
+    
     while(j >= 1){
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
@@ -95,9 +98,8 @@ banner-img: "events_cut_scale.JPG"
 	      loc = cells[5].innerHTML;
 	      
 	      dt_obj = new Date(dt);
-	      var day = date.getDate();
-  	      var mon = monthNames[date.getMonth()];
-              var yr = date.getFullYear();
+	      day = date.getDate();
+  	      mon = monthNames[date.getMonth()];
 	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
