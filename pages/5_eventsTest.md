@@ -9,8 +9,6 @@ banner-img: "events_cut_scale.JPG"
 
 {% assign talks=site.talks |sort: 'date' %}
 
-{% assign cur_years=""| split: "," %}
-
 <!-- hidden table with all dates to be dsplayed on main page -->
 <table id="cur_data" style="display: none;">
 <thead>
@@ -30,12 +28,10 @@ banner-img: "events_cut_scale.JPG"
 		<td>{{talk.location}}</td>
 		<td>{{talk.content|strip_html|truncate:170}}</td>
 	    </tr>
-	    {% assign cur_years=cur_years | push: talk_year %}
 	{% endif %}
     {% endfor %}
 </tbody>
 </table>
-{% assign cur_years=cur_years|uniq %}
 
 <div id="events">
 	<h2>Past Events</h2>
