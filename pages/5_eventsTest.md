@@ -68,6 +68,7 @@ banner-img: "events_cut_scale.JPG"
     var table = document.getElementById("cur_data");
     var cells;
     var year_old = table.rows[j].cells[0].innerHTML - 1;
+    var year;
     
     while(j >= 0){
 	      cells = table.rows[j].cells;
