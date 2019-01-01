@@ -73,6 +73,7 @@ banner-img: "events_cut_scale.JPG"
 	  var row;
 	  alert(table.rows.length);
 	  alert(table.rows[2].cells.length);
+	  alert('sad');
 	  while(j > 3){
 	      row = table.rows[j];
 	      alert(row.cells[0]);
