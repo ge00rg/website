@@ -67,10 +67,10 @@ banner-img: "events_cut_scale.JPG"
     var j = first_future_talk - 1;
     var table = document.getElementById("cur_data");
     var cells;
-    var year_old = table.rows[j].cells[0].innerHTML - 1;
+    var year_old = table.rows[j].cells[0].innerHTML + 1;
     var year;
     
-    while(j >= 0){
+    while(j >= 1){
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
 	      alert(year);
