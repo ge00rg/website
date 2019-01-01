@@ -87,6 +87,10 @@ banner-img: "events_cut_scale.JPG"
 	      aff = cells[4].innerHTML;
 	      loc = cells[5].innerHTML;
 	      
+	      alert(dt);
+	      tst = new Date(dt);
+	      alert(tst);
+	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
 	          $('#events').append("<h3>"+year+"</h3>");
