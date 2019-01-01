@@ -65,7 +65,7 @@ banner-img: "events_cut_scale.JPG"
     first_future_talk += 1
     });
     
-    var j = first_future_talk - 1;
+    var j = first_future_talk;
     var table = document.getElementById("cur_data");
     var cells;
     var year_old = table.rows[j].cells[0].innerHTML + 1;
