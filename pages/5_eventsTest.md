@@ -48,11 +48,12 @@ banner-img: "events_cut_scale.JPG"
     var s = {{cur_years}};
     var years_con = s.toString()
     var years = new Array();
-    
+    <!--
     var i = 4;
     do {
         years.push(years_con.substring(0, i));
         } while((years_con = years_con.substring(i, years_con.length)) != "");
+    -->
 		
     var first_future_talk = 0;
     $('#cur_data tbody tr').each(function(){
@@ -63,6 +64,17 @@ banner-img: "events_cut_scale.JPG"
     first_future_talk += 1
     });
     
+    var j = first_future_talk - 1;
+    var table = document.getElementById("cur_data");
+    var cells;
+    
+    while(j >= 0){
+	      cells = table.rows[j].cells;
+	      year = cells[0].innerHTML
+	      if (year == 2018){alert(year);}
+	      j -= 1;
+	  }
+    <!--
     years.reverse().forEach(function(year) {
       if(year <= current_year){
           $('#events').append("<h3>"+year+"</h3>");
@@ -78,6 +90,7 @@ banner-img: "events_cut_scale.JPG"
 	  }
 	  }
     });
+    -->
 </script>
 
 
