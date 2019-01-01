@@ -68,20 +68,34 @@ banner-img: "events_cut_scale.JPG"
     var table = document.getElementById("cur_data");
     var cells;
     var year_old = table.rows[j].cells[0].innerHTML + 1;
+    
     var year;
+    var date;
+    var title;
+    var speaker;
+    var affiliation;
+    var location;
     
     var table_handle;
     
     while(j >= 1){
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
+	      date = cells[1].innerHTML;
+	      title = cells[2].innerHTML;
+	      speaker = cells[3].innerHTML;
+	      affiliation = cells[4].innerHTML;
+	      location = cells[5].innerHTML;
+	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
 	          $('#events').append("<h3>"+year+"</h3>");
-                  $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>");
+                  $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;'></table>");
 	          year_old = year;
 	      }
-	      $('#'+table_handle).append("<tr><td>"+year+"</td></tr>");
+	      $('#'+table_handle).append("<tr>
+	      <td><b>"+speaker+"</b></td>
+	      </tr>");
 	      j -= 1;
 	  }
     <!--
