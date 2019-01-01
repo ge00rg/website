@@ -70,13 +70,10 @@ banner-img: "events_cut_scale.JPG"
 	  var j = first_future_talk - 1;
 	  
 	  var table = document.getElementById("cur_data");
-	  var row;
-	  alert(table.rows.length);
-	  alert(table.rows[2].cells.length);
-	  alert('sad');
+	  var cells;
 	  while(j > 3){
-	      row = table.rows[j];
-	      alert(row.cells[0]);
+	      cells = table.rows[j].cells;
+	      alert(cells[0].innerHtml);
 	  }
 	  }
     });
