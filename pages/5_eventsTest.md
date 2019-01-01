@@ -33,9 +33,7 @@ banner-img: "events_cut_scale.JPG"
 </tbody>
 </table>
 
-<div id="events">
-	<h2>Past Events</h2>
-</div>
+<div id="events"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -74,6 +72,8 @@ banner-img: "events_cut_scale.JPG"
     
     var j = first_future_talk + 1;
     var year_old = 0;
+    
+    $('#events').append("<h2>Upcoming Events</h2>");
     while(j < table.rows.length ){
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
@@ -100,7 +100,8 @@ banner-img: "events_cut_scale.JPG"
     
     j = first_future_talk;
     year_old = table.rows[j].cells[0].innerHTML + 1;
-    
+
+    $('#events').append("<h2>Past Events</h2>");
     while(j >= 1){
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
