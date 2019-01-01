@@ -67,9 +67,11 @@ banner-img: "events_cut_scale.JPG"
       if(year <= current_year){
           $('#events').append("<h3>"+year+"</h3>");
           $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'></table>");
-	  j = first_future_talk - 1;
+	  var j = first_future_talk - 1;
 	  while(j > 10){
-	       alert('asd');
+	       var table = document.getElementById("cur_data");
+	       row = table.rows[j]
+	       alert(row);
 	       j -= 1;
 	  }
 	  }
