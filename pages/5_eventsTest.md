@@ -76,7 +76,7 @@ banner-img: "events_cut_scale.JPG"
 	      cells = table.rows[j].cells;
 	      year = cells[0].innerHTML;
 	      if (year < year_old){
-	          table_handle = 'past_"+year+"'
+	          table_handle = 'past_'+year;
 		  alert(table_handle);
 	          $('#events').append("<h3>"+year+"</h3>");
                   $('#events').append("<table id='past_"+year+"' class='talks' style='overflow: hidden;'><tr><td>test</td></tr></table>");
