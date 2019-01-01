@@ -14,7 +14,7 @@ banner-img: "events_cut_scale.JPG"
 <!-- hidden table with all dates to be dsplayed on main page -->
 <table id="cur_data">
 <thead>
-    <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th></tr>
+    <tr><th>year</th><th>date</th><th>title</th><th>speaker</th><th>affiliation</th><th>location</th><th>content</th></tr>
 </thead>
 <tbody>
     {% for talk in talks %}
@@ -28,6 +28,7 @@ banner-img: "events_cut_scale.JPG"
 		<td>{{talk.speaker}}</td>
 		<td>{{talk.affiliation}}</td>
 		<td>{{talk.location}}</td>
+		<td>{{talk.content|strip_html|truncate:170}}</td>
 	    </tr>
 	    {% assign cur_years=cur_years | push: talk_year %}
 	{% endif %}
