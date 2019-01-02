@@ -2,7 +2,7 @@
 layout: page
 title : Archive 
 permalink: /archive/
-hidden: true
+hide: true
 ---
 
 {% assign talks_rev=site.talks |sort: 'date' %}
@@ -10,8 +10,6 @@ hidden: true
 
 {% assign years=""| split: "," %}
 {% assign dates=""| split: "," %}
-
-{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
 
 {% for talk in talks %}
 {% assign year=talk.date | date: "%Y" %}
@@ -29,8 +27,6 @@ hidden: true
   {% assign year_int=year|plus:0 %}
   {% if year_int < last_year %}
     {% assign past_years=past_years | push: year %}
-  {% else %}
-        {% assign future_years=future_years | push: year %}
   {% endif %}
 {% endfor %}
 
