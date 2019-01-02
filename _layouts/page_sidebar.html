@@ -62,11 +62,12 @@ layout: default
             {% assign future_talks=future_talks|push:post %}
         {% endif %}
     {% endfor %}
+    {% assign future_talks=future_talks|sort: 'date' %}
 
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% assign last_year=this_year| minus:1 %}
 
-<table id="future_events">
+<table id="future_events" style="display:none;">
 <thead>
     <tr><th>year</th><th>date</th><th>speaker</th><th>affiliation</th><th>url</th><th>priority</th></tr>
 </thead>
@@ -87,7 +88,12 @@ layout: default
     {% endfor %}
 </tbody>
 </table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<scipt>
+	
+</script>
 
+<!--
     {% assign i=0 %}
 
     {% for post in talks %}
@@ -107,6 +113,7 @@ layout: default
             {% endif %}
         {% endif %}
     {% endfor %}
+-->
 
     {% for post in talks %}
         {% unless post.priority %}
