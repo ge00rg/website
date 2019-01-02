@@ -91,6 +91,13 @@ layout: default
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+var monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+    ];
+	
 var maxevents = 3;
 var i = 0;
 	
@@ -106,6 +113,10 @@ var urll;
 var speaker;
 var affil;
 	
+var day;
+var mon;
+var yr;
+	
 var j = 1;
 while(j < table.rows.length){
     cells = table.rows[j].cells;
@@ -119,7 +130,10 @@ while(j < table.rows.length){
 				    urll = cells[4].innerHTML;
 				    speaker = cells[2].innerHTML;
 				    affil = cells[3].innerHTML;
-				    $('#sidebar').append("<a class='post-link' href='"+urll+"'><span>"+speaker+" ["+affil+"]</span><br><div class='date'>"+dat+"</div></a>");
+				    day = dat.getDate();
+				    mon = monthNames[dat.getMonth()];
+				    yr = cells[0].innerHTML;
+				    $('#sidebar').append("<a class='post-link' href='"+urll+"'><span>"+speaker+" ["+affil+"]</span><br><div class='date'>"+day+" "+mon+", "+yr+"</div></a>");
 			    }
 		    }
 	    }
