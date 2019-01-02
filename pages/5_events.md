@@ -85,9 +85,6 @@ banner-img: "events_cut_scale.JPG"
 	      loc = cells[5].innerHTML;
 	      con = cells[6].innerHTML;
 	      urll = cells[7].innerHTML;
-	      urll_str = encodeURI(urll);
-	      alert(urll);
-	      alert(encode(urll));
 	      
 	      dt_obj = new Date(dt);
 	      day = dt_obj.getDate();
@@ -99,7 +96,7 @@ banner-img: "events_cut_scale.JPG"
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;display: table!important;margin:2em;'></table>");
 	          year_old = year;
 	      }
-	      $('#'+table_handle).append("<tr onclick='location.href='"+encode(urll)+"'><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
+	      $('#'+table_handle).append("<tr onclick='location.href='"+encodeURIComponent(urll)+"'><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
 	      j += 1;
 	  }
     
