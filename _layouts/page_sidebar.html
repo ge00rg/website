@@ -40,7 +40,7 @@ layout: default
 {% assign max_posts=2 %}
 {% assign talks=site.talks | sort: 'date' %}
 {% assign max_events=3 %}
-<div class="side_events">
+<div id="sidebar" class="side_events">
     <h1>Latest News</h1>
     {% assign i=0 %}
     {% for post in site.posts %}
@@ -91,8 +91,8 @@ layout: default
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-var i = {{i}};
-alert(i);
+var maxevents = 3;
+var i = 0;
 	
 var today = new Date();
 	
@@ -113,7 +113,9 @@ while(j < table.rows.length){
 	    if (priority_dt <= today){
 		    dat = new Date(cells[1].innerHTML);
 		    if(dat > today){
-			    alert(dat);
+			    if(i < maxevents){
+				    $('#sidebar').append(dat);
+			    }
 		    }
 	    }
     }
