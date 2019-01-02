@@ -85,7 +85,7 @@ banner-img: "events_cut_scale.JPG"
 	      loc = cells[5].innerHTML;
 	      con = cells[6].innerHTML;
 	      urll = "'"+cells[7].innerHTML+"'";
-	      urlll = urll..replace(/\//g, '\\/');
+	      urlll = urll.replace(/\//g, '\\/');
 	      alert(urlll);
 	      
 	      dt_obj = new Date(dt);
