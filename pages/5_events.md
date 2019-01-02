@@ -34,7 +34,7 @@ permalink: /archive/
 {% assign years_rev=years|reverse %}
 
 <!-- Past -->
-<h2>Past Events</h2>
+{{ site.time | date: '%Y' }}
 {% for i in years %}
 {% if past_years contains i %}
 <h3>{{i}}</h3>
