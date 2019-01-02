@@ -33,8 +33,10 @@ permalink: /archive/
 {% assign years=years|uniq %}
 {% assign years_rev=years|reverse %}
 
-<!-- Past -->
-{{ site.time | date: '%Y' }}
+
+{% assign year_now=site.time | date: '%Y' %}
+{% assign last_year=year_now|minus:1 %}
+
 {% for i in years %}
 {% if past_years contains i %}
 <h3>{{i}}</h3>
@@ -45,7 +47,7 @@ permalink: /archive/
 {% assign year=talk.date|date: "%Y" %}
 {% capture date %}{{talk.date | date: '%s'}}{% endcapture %}
 
-{% if date < nowunix %}
+{% if year < last_year %}
 {% if year==i %}
     {%if talk.img %}
       {% assign imgurl=talk.img %}
