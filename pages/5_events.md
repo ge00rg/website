@@ -2,6 +2,7 @@
 layout: page
 title : Archive 
 permalink: /archive/
+hidden: true
 ---
 
 {% assign talks_rev=site.talks |sort: 'date' %}
