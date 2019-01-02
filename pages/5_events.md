@@ -45,10 +45,10 @@ permalink: /archive/
 {% for talk in talks %}
 
 {% assign year=talk.date|date: "%Y" %}
-{% assign year=year|plus:0 %}
+{% assign year_int=year|plus:0 %}
 {% capture date %}{{talk.date | date: '%s'}}{% endcapture %}
 
-{% if year < last_year %}
+{% if year_int < last_year %}
 {% if year==i %}
     {%if talk.img %}
       {% assign imgurl=talk.img %}
