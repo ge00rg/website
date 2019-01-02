@@ -63,6 +63,9 @@ layout: default
         {% endif %}
     {% endfor %}
 
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% assign last_year=this_year| minus:1 %}
+
 <table id="future_events">
 <thead>
     <tr><th>year</th><th>date</th><th>speaker</th><th>affiliation</th><th>url</th><th>priority</th></tr>
