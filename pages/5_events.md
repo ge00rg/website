@@ -93,7 +93,7 @@ banner-img: "events_cut_scale.JPG"
 	      if (year > year_old){
 	          table_handle = 'future_'+year;
 	          $('#events').append("<h3>"+year+"</h3>");
-                  $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;display: table!important;margin-top:1.5em;'></table>");
+                  $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;display: table!important;margin:2em;'></table>");
 	          year_old = year;
 	      }
 	      $('#'+table_handle).append("<tr onclick='location.href='"+urll+"'><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
@@ -121,7 +121,7 @@ banner-img: "events_cut_scale.JPG"
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
 	          $('#events').append("<h3>"+year+"</h3>");
-                  $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden; display: table!important;margin-top:1.5em;'></table>");
+                  $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden; display: table!important;margin:2em;'></table>");
 	          year_old = year;
 	      }
 	      $('#'+table_handle).append("<tr><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
