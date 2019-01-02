@@ -93,10 +93,15 @@ layout: default
 <script>
 var table = document.getElementById("future_events");
 var cells;
+	
+var priority;
+	
 var j = 1;
 while(j < table.rows.length){
     cells = table.rows[j].cells;
-    alert(cells[0].innerHTML);
+    priority = cells[5].innerHTML;
+    alert(priority);
+    if (priority){alert('yes');}
     j += 1
 			     }
 </script>
