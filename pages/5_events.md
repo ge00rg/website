@@ -85,7 +85,7 @@ banner-img: "events_cut_scale.JPG"
 	      loc = cells[5].innerHTML;
 	      con = cells[6].innerHTML;
 	      urll = cells[7].innerHTML;
-	      urll_str = JSON.stringify(urll);
+	      urll_str = encodeURI(urll);
 	      
 	      dt_obj = new Date(dt);
 	      day = dt_obj.getDate();
