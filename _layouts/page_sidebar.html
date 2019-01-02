@@ -53,7 +53,16 @@ layout: default
         {% assign i = i | plus:1 %}
     {% endfor %}
     <h1>Upcoming Events</h1>
+
     {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+    {% assign future_talks=""|split:"," %}
+    {% for post in talks %}
+        {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
+        {% if posttime > nowunix %}
+            {% assign future_talks=future_talks|push:post %}
+        {% endif %}
+    {% endfor %}
+
     {% assign i=0 %}
 
     {% for post in talks %}
