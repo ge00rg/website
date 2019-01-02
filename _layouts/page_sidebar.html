@@ -60,9 +60,30 @@ layout: default
         {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
         {% if posttime > nowunix %}
             {% assign future_talks=future_talks|push:post %}
-{{post.title}}
         {% endif %}
     {% endfor %}
+
+<table id="future_events">
+<thead>
+    <tr><th>year</th><th>date</th><th>speaker</th><th>affiliation</th><th>url</th></tr><th>priority</th>
+</thead>
+<tbody>
+    {% for talk in talks %}
+	{% assign talk_year=talk.date|date:'%Y' %}
+	{% assign talk_year=talk_year|plus:0 %}
+	{% if talk_year >= last_year %}
+	    <tr>
+	    <td>{{talk_year}}</td>
+		<td>{{talk.date}}</td>
+		<td>{{talk.speaker}}</td>
+		<td>{{talk.affiliation}}</td>
+		<td>{{ talk.url | prepend: site.baseurl }}</td>
+        <td>{{talk.priority}}</td>
+	    </tr>
+	{% endif %}
+    {% endfor %}
+</tbody>
+</table>
 
     {% assign i=0 %}
 
