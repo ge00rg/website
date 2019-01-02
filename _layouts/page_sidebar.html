@@ -91,6 +91,8 @@ layout: default
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+var today = new Date();
+	
 var table = document.getElementById("future_events");
 var cells;
 	
@@ -100,8 +102,13 @@ var j = 1;
 while(j < table.rows.length){
     cells = table.rows[j].cells;
     priority = cells[5].innerHTML;
-    alert(priority);
-    if (priority){alert('yes');}
+    priority_dt = new Date(priority);
+    if (priority){
+	    alert(priority);
+	    if (priority_dt <= today){
+		    alert('aaa');
+	    }
+    }
     j += 1
 			     }
 </script>
