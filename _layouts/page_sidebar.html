@@ -90,7 +90,13 @@ layout: default
 </table>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <scipt>
-	
+var table = document.getElementById("future_events");
+var cells;
+var j = 1;
+while(j < table.rows.length){
+    cells = table.rows[j].cells;
+    alert(cells[0]);
+			     }
 </script>
 
 <!--
