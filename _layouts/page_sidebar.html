@@ -52,7 +52,6 @@ layout: default
         {% endif %}
         {% assign i = i | plus:1 %}
     {% endfor %}
-    <h1>Upcoming Events</h1>
 
     {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
     {% assign future_talks=""|split:"," %}
@@ -88,6 +87,8 @@ layout: default
     {% endfor %}
 </tbody>
 </table>
+
+<h1>Upcoming Events</h1>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
