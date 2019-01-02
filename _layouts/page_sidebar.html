@@ -60,9 +60,9 @@ layout: default
         {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
         {% if posttime > nowunix %}
             {% assign future_talks=future_talks|push:post %}
+{{post.title}}
         {% endif %}
     {% endfor %}
-{{future_talks}}
 
     {% assign i=0 %}
 
