@@ -134,35 +134,23 @@ while(j < table.rows.length){
 				    mon = monthNames[dat.getMonth()];
 				    yr = cells[0].innerHTML;
 				    $('#sidebar').append("<a class='post-link' href='"+urll+"'><span>"+speaker+" ["+affil+"]</span><br><div class='date'>"+day+" "+mon+", "+yr+"</div></a>");
+				    i += 1;
 			    }
 		    }
 	    }
     }
     j += 1
-			     }
+}
+
+j = 1;
+while(j < table.rows.length){
+    cells = table.rows[j].cells;
+    priority = cells[5].innerHTML;
+    if (!priority){
+	    alert(priority);
+    }
+}
 </script>
-
-<!--
-    {% assign i=0 %}
-
-    {% for post in talks %}
-        {% if post.priority %}
-            {% capture postpriotime %}{{post.priority | date: '%s'}}{% endcapture %}
-            {% if postpriotime <= nowunix %}
-                {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
-                {% if posttime > nowunix %}
-                    {% if i < max_events %}
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                            <span>{{post.speaker}}{% if post.affiliation %} [{{post.affiliation}}]{% endif %}</span><br>
-                            <div class="date">{{post.date | date: '%B %d, %Y'}}</div>
-                        </a>
-                        {% assign i = i | plus:1 %}
-                    {% endif %}
-                {% endif %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
--->
 
     {% for post in talks %}
         {% unless post.priority %}
