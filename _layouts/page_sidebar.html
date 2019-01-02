@@ -97,6 +97,8 @@ var table = document.getElementById("future_events");
 var cells;
 	
 var priority;
+var priority_dt;
+var dat;
 	
 var j = 1;
 while(j < table.rows.length){
@@ -105,8 +107,11 @@ while(j < table.rows.length){
     priority_dt = new Date(priority);
     if (priority){
 	    alert(priority);
-	    if (priority_dt >= today){
-		    alert('aaa');
+	    if (priority_dt <= today){
+		    dat = new Date(cells[1].innerHTML);
+		    if(dat > today){
+			    alert(dat);
+		    }
 	    }
     }
     j += 1
