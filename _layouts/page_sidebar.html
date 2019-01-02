@@ -164,21 +164,3 @@ while(j < table.rows.length){
     j += 1;
 }
 </script>
-
-<!--
-    {% for post in talks %}
-        {% unless post.priority %}
-            {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
-            {% if posttime > nowunix %}
-                {% if i < max_events %}
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                        <span>{{post.speaker}}{% if post.affiliation %} [{{post.affiliation}}]{% endif %}</span><br>
-                        <div class="date">{{post.date | date: '%B %d, %Y'}}</div>
-                    </a>
-                    {% assign i = i | plus:1 %}
-                {% endif %}
-            {% endif %}
-        {% endunless %}
-    {% endfor %}
-</div>
--->
