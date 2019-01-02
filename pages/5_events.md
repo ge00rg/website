@@ -19,11 +19,14 @@ permalink: /archive/
 {% assign dates=dates | push: date %}
 {% endfor %}
 
-{% assign future_years="" | split: "," %}
+{% assign year_now=site.time | date: '%Y' %}
+{% assign last_year=year_now|minus:1 %}
+
 {% assign past_years=""| split: "," %}
 {% for date in dates %}
   {% assign year=date|date:"%Y" %}
-  {% if date < nowunix %}
+  {% assign year_int=year|plus:0 %}
+  {% if year_int < last_year %}
     {% assign past_years=past_years | push: year %}
   {% else %}
         {% assign future_years=future_years | push: year %}
@@ -33,9 +36,6 @@ permalink: /archive/
 {% assign years=years|uniq %}
 {% assign years_rev=years|reverse %}
 
-
-{% assign year_now=site.time | date: '%Y' %}
-{% assign last_year=year_now|minus:1 %}
 
 {% for i in years %}
 {% if past_years contains i %}
