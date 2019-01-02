@@ -1,7 +1,7 @@
 --- 
 layout: page
-title : Events2 
-permalink: /events2/
+title : Events 
+permalink: /events/
 banner-img: "events_cut_scale.JPG"
 ---
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
