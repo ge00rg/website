@@ -96,6 +96,7 @@ banner-img: "events_cut_scale.JPG"
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;display: table!important;margin:2em;'></table>");
 	          year_old = year;
 	      }
+	      alert(urll);
 	      $('#'+table_handle).append("<tr onclick='location.href='"+urll+"'><td><b>"+spkr+"</b><span class='affil'> ["+aff+"] </span><span class='event_date'>"+day+" "+mon+", "+year+"</span><br><i>"+ttl+"</i><br><div id='abstractbox'>"+con+"</div></td></tr>");
 	      j += 1;
 	  }
