@@ -2,7 +2,7 @@
 layout: member_post
 title: Christopher Brian Currin
 img: "chris_crop.JPG"
-position: Visiting PhD Student
+position: Alumni
 permalink: /chris/
 room: MAR 5.014
 email: chris.currin+de@gmail.com
