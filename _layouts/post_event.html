@@ -3,7 +3,7 @@ layout: default
 ---
 {% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
 {% assign last_year=this_year| minus:1 %}
-{% assign talk_year=talk.date|date:'%Y' %}
+{% assign talk_year=page.date|date:'%Y' %}
 {% assign talk_year=talk_year|plus:0 %}
 
 <article {% if page.banner-img %}class="feature-image"{% endif %}>
