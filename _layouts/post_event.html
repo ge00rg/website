@@ -1,10 +1,19 @@
 ---
 layout: default
 ---
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% assign last_year=this_year| minus:1 %}
+{% assign talk_year=talk.date|date:'%Y' %}
+{% assign talk_year=talk_year|plus:0 %}
+
 <article {% if page.banner-img %}class="feature-image"{% endif %}>
     <header id="main" style="background-image: url('{{ site.baseurl }}/assets/img/banners/{{ page.banner-img }}')">
         <h2 id="{{ page.title | cgi_escape }}" class="title event-title">{{ page.title }}</h2>
-        <a href="{{site.baseurl}}/events" class="back-button-events">back</a>
+        {% if talk_year >= last_year %}
+            <a href="{{site.baseurl}}/events" class="back-button-events">back</a>
+        {% else %}
+            <a href="{{site.baseurl}}/archive" class="back-button-events">back</a>
+        {% endif %}
         <div class="meta">
         {% assign time=page.date|date: "%R" %}
         {% if time=="00:00" %}
@@ -29,10 +38,3 @@ layout: default
         {% endif %}
     </section>
 </article>
-
-<!-- Disqus -->
-{% if site.theme_settings.disqus_shortname %}
-    <div class="comments">
-        {% include disqus.html %}
-    </div>
-{% endif %}
