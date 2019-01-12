@@ -28,9 +28,9 @@ layout: default
 
 <div class="posts">
     {% for post in site.posts %}
-        <div class="post-teaser">
+        <div class="post-teaser" id="{{post.url}}">
             {% if post.thumbnail %} 
-                <div class="post-img" id="{{post.url}}">
+                <div class="post-img">
                  <img src="{{ site.baseurl }}/assets/img/thumbnails/{{ post.thumbnail }}">
                 </div>
             {% endif %}
