@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<style>
+.feature-image header{
+    background-image: url('{{ site.baseurl }}/assets/img/banners/{{ page.banner-img }}')
+}
+@media screen and (max-width: 800px) {
+    .feature-image header{
+        background-image: url('')
+    }
+    .feature-image .title{color: #383838;}
+    .subtitle{display: none;}
+}
+</style>
+<article {% if page.banner-img %}class="feature-image"{% endif %}>
+    <header id="main">
+        <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
+            {{ page.title }}
+        </h1>
+    
+        {% if page.subtitle %}
+            <h2 align="left" class="subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+      
+    </header>
+</article>
+
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% assign last_year=this_year| minus:1 %}
+
+<div class="posts">
+    {% for post in site.posts %}
+        {% assign post_year=post.date|date:'%Y' %}
+	    {% assign post_year=post_year|plus:0 %}
+        {% if post_year < last_year %}
+            <div class="post-teaser" id="{{post.url}}">
+                {% if post.thumbnail %} 
+                    <div class="post-img">
+                    <img src="{{ site.baseurl }}/assets/img/thumbnails/{{ post.thumbnail }}">
+                    </div>
+                {% endif %}
+                <span>
+                    <header>
+                        <h2>{{ post.title }}</h2>
+                        <p class="meta">
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </p>
+                    </header>
+                    <div class="excerpt">
+                    {{ post.content | strip_html | escape }}
+                    </div>
+                    <div class="txtcol"><a>Show More</a></div>
+                </span>
+            </div>
+           {% endif %}
+       {% endfor %}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$( ".excerpt" ).each(function( ) {
+    if($(this).height()/parseFloat($("body").css("font-size")) < 7.1){
+        $(this).next().css("display", "none");
+    }
+    $(this).addClass("truncate");
+    if($(this).height()/parseFloat($("body").css("font-size")) < 1){
+        $(this).css("display", 'none');
+    }
+}); 
+  
+$(".txtcol").click(function(){
+    if($(this).prev().hasClass("truncate")) {
+        $(this).children('a').text("Show Less");
+        } 
+    else {
+        $(this).children('a').text("Show More");
+        }
+    $(this).prev().toggleClass("truncate");
+    });
+});
+</script>
