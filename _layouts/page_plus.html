@@ -26,28 +26,35 @@ layout: default
     </header>
 </article>
 
+{% capture this_year %}{{'now' | date: '%Y'}}{% endcapture %}
+{% assign last_year=this_year| minus:1 %}
+
 <div class="posts">
     {% for post in site.posts %}
-        <div class="post-teaser" id="{{post.url}}">
-            {% if post.thumbnail %} 
-                <div class="post-img">
-                 <img src="{{ site.baseurl }}/assets/img/thumbnails/{{ post.thumbnail }}">
-                </div>
-            {% endif %}
-            <span>
-                <header>
-                    <h2>{{ post.title }}</h2>
-                    <p class="meta">
-                        {{ post.date | date: "%B %-d, %Y" }}
-                    </p>
-                </header>
-                <div class="excerpt">
-                  {{ post.content | strip_html | escape }}
-                </div>
-                <div class="txtcol"><a>Show More</a></div>
-            </span>
-        </div>
-    {% endfor %}
+        {% assign post_year=talk.date|date:'%Y' %}
+	    {% assign post_year=talk_year|plus:0 %}
+        {% if post_year >= last_year %}
+            <div class="post-teaser" id="{{post.url}}">
+                {% if post.thumbnail %} 
+                    <div class="post-img">
+                    <img src="{{ site.baseurl }}/assets/img/thumbnails/{{ post.thumbnail }}">
+                    </div>
+                {% endif %}
+                <span>
+                    <header>
+                        <h2>{{ post.title }}</h2>
+                        <p class="meta">
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </p>
+                    </header>
+                    <div class="excerpt">
+                    {{ post.content | strip_html | escape }}
+                    </div>
+                    <div class="txtcol"><a>Show More</a></div>
+                </span>
+            </div>
+           {% endif %}
+       {% endfor %}
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
