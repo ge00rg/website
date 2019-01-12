@@ -10,9 +10,9 @@ layout: default
     <header id="main" style="background-image: url('{{ site.baseurl }}/assets/img/banners/{{ page.banner-img }}')">
         <h2 id="{{ page.title | cgi_escape }}" class="title event-title">{{ page.title }}</h2>
         {% if talk_year >= last_year %}
-            <a href="{{site.baseurl}}/events" class="back-button-events">back</a>
+            <a href="{{site.baseurl}}/events" class="back-button-events">back to events</a>
         {% else %}
-            <a href="{{site.baseurl}}/archive" class="back-button-events">back</a>
+            <a href="{{site.baseurl}}/archive" class="back-button-events">back to archive</a>
         {% endif %}
         <div class="meta">
         {% assign time=page.date|date: "%R" %}
