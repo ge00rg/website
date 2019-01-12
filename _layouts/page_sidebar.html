@@ -45,7 +45,7 @@ layout: default
     {% assign i=0 %}
     {% for post in site.posts %}
         {% if i < max_posts %}
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <a class="post-link" href="{{site.baseurl}}/#{{post.url}}">
                 {{post.title}}<br>
                 <div class="date">{{post.date | date: '%B %d, %Y'}}</div>
             </a>
