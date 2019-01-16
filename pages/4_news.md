@@ -1,5 +1,5 @@
 --- 
-layout: page_plus
+layout: news_page
 title : News 
 permalink: /news/
 subtitle:
