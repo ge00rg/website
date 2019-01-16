@@ -53,6 +53,7 @@ a.head:hover{
     .project-text{clear: both;}
 }
 </style>
+<!-- layout for research pages that are not the main one -->
 {% include researchnav_v2.html %}
 {% assign research=site.pages| where:"title","Research" %}
 {% assign research=research[0] %}
@@ -70,6 +71,8 @@ a.head:hover{
 
 {% if n_headings > 1 %}
 <div class="content">
+<!-- post all projects that match one of the headings -->
+<!-- everything else is like in _includes/research_main.html -->
 {% for project in site.research %}
   {% if project.parents==used_headings %}
      <div style="clear: both; overflow-wrap: normal; padding-bottom: 30px;">
@@ -222,12 +225,12 @@ $('.author').each(function() {
     var tp = ele.concat(type)
    $(this).hover( function(){
        if (type == 'lnk') {
-           <!--$(this).css('text-decoration', 'underline');-->
+           //$(this).css('text-decoration', 'underline');
 	   $("[id='"+tp+"']").css('text-decoration', 'underline');
            $("[id='"+trigger+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
        }
        else {
-            <!--$(this).css({'transform': 'scale(1.5)', 'z-index': '5'});-->
+            //$(this).css({'transform': 'scale(1.5)', 'z-index': '5'});
            $("[id='"+tp+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
            $("[id='"+trigger+"']").css('text-decoration', 'underline');
        }
@@ -236,13 +239,13 @@ $('.author').each(function() {
       if (type == 'lnk') {
            $("[id='"+trigger+"']").css({'transform': 'none', 'z-index': '1'});
            $("[id='"+tp+"']").css('text-decoration', 'none');
-            <!--$(this).css('text-decoration', 'none');-->
+            //$(this).css('text-decoration', 'none');
 
        }
        else {
            $("[id='"+trigger+"']").css('text-decoration', 'none');
            $("[id='"+tp+"']").css({'transform': 'none', 'z-index': '1'});
-            <!--$(this).css({'transform': 'none', 'z-index': '1'});-->
+            //$(this).css({'transform': 'none', 'z-index': '1'});
 
        }
    });
