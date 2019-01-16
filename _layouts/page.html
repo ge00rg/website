@@ -14,7 +14,9 @@ layout: default
 
 }
 </style>
+<!-- basic page -->
 
+<!--banner and title -->
 <article {% if page.banner-img %}class="feature-image"{% endif %}>
     <header id="main">
         <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
@@ -26,6 +28,7 @@ layout: default
         {% endif %}
       
     </header>
+    <!-- content -->
     <section class="post-content">
         {% if page.bootstrap %}
             <div class="bootstrap-iso">
