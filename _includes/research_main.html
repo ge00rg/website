@@ -109,35 +109,40 @@ a.head:hover{
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+//trigger hover effect on all associated elements (names and images of author across projects)
 var dct = {"lnk": "flt", "flt": "lnk"};
 $('.author').each(function() {
     var ele = $(this).attr('id').slice(0,-3);
     var type = $(this).attr('id').slice(-3)
     var trigger = ele.concat(dct[type]);
     var tp = ele.concat(type)
+    //get type and id of hovered element
    $(this).hover( function(){
        if (type == 'lnk') {
-           <!--$(this).css('text-decoration', 'underline');-->
+	   //trigger desired effect on associated link elements
+           //$(this).css('text-decoration', 'underline');
 	   $("[id='"+tp+"']").css('text-decoration', 'underline');
            $("[id='"+trigger+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
        }
        else {
-            <!--$(this).css({'transform': 'scale(1.5)', 'z-index': '5'});-->
+	    // trigger desired effect on associated image elements
+            //$(this).css({'transform': 'scale(1.5)', 'z-index': '5'});
            $("[id='"+tp+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
            $("[id='"+trigger+"']").css('text-decoration', 'underline');
        }
    },
    function(){
+	// same as above, but for 'unhovering'
       if (type == 'lnk') {
            $("[id='"+trigger+"']").css({'transform': 'none', 'z-index': '1'});
            $("[id='"+tp+"']").css('text-decoration', 'none');
-            <!--$(this).css('text-decoration', 'none');-->
+            //$(this).css('text-decoration', 'none');
 
        }
        else {
            $("[id='"+trigger+"']").css('text-decoration', 'none');
            $("[id='"+tp+"']").css({'transform': 'none', 'z-index': '1'});
-            <!--$(this).css({'transform': 'none', 'z-index': '1'});-->
+            //$(this).css({'transform': 'none', 'z-index': '1'});
 
        }
    });
