@@ -13,6 +13,7 @@ layout: default
     .subtitle{display: none;}
 }
 </style>
+<!-- same as news_page, except all posts older than last year go here -->
 <article {% if page.banner-img %}class="feature-image"{% endif %}>
     <header id="main">
         <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
@@ -57,6 +58,7 @@ layout: default
        {% endfor %}
 </div>
 
+<!-- script for show more/show less button, related to "truncate" class -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
