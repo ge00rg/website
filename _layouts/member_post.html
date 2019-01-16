@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<!--title and image -->
 <article {% if page.banner-img %}class="feature-image"{% endif %}>
     <header id="main" style="background-image: url('{{ site.baseurl }}/assets/img/banners/{{ page.banner-img }}')">
         <a href="{{site.baseurl}}/team" class="back-button-wide">back</a>
@@ -12,6 +13,7 @@ layout: default
         </p>
     </header>
 
+    <!-- CONTACT INFO -->
     <div class="member-container">
         <div class="memberimg">
             <img src="{{ site.baseurl }}/assets/img/members/{{ page.img }}">
@@ -23,29 +25,13 @@ layout: default
             </span>
         </div>
 
+        <!-- bio -->
         <div class="membertxt">
             <br class="break-mobile" />
             {{page.content}}
         </div>
     </div>
 </article>
-
-
-<!-- Disqus -->
-{% if site.theme_settings.disqus_shortname %}
-    <div class="comments">
-        {% include disqus.html %}
-    </div>
-{% endif %}
-
-<!-- Post navigation -->
-<!--
-{% unless page.position=="Alumni" %}
-    {% if site.theme_settings.post_navigation %}
-        {% include post_nav.html %}
-    {% endif %}
-{% endunless %}
--->
 
 <style>
 .back-button-wide{float: right;}
