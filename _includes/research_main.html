@@ -53,13 +53,16 @@ a.head:hover{
 
 <div class="content">
     {% for heading in page.headings %}
+    <!--create research entries for each existing category -->
         <div style="clear: both;">
             <a id="{{heading}}" class="anchor"></a>
             <h2><u>{{heading}}</u></h2>
             {% for project in site.research %}
+	    <!-- list all projects whose first category matches heading here -->
                 {% if project.parents[0] == heading %}
                     <div style="clear: both; overflow-wrap: normal; padding-bottom: 30px;">
                         <h3 style="margin-bottom: 0;">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
+			<!--make author-links-->
                         <h5 style="margin-bottom: 0px;">
                             {% assign i=0 %}
                             {% assign authors=project.authors %}
@@ -74,13 +77,14 @@ a.head:hover{
                                 {% assign i=i | plus: 1 %}
                             {% endfor %}
                         </h5>
+		    <!--project image-->
                     <div style="position: relative;">
                         {% if project.image %}
                             <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" style="float: left; padding: 50px 20px 0px 0px; width: 350px; min-height: 250xpx;">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
                         {% endif %}
-        
+        		<!-- make little author image floats-->
                         {% assign leftpix=-30 %}
                         {% for author in project.authors %}
                             {% for member in site.members %}
@@ -97,6 +101,7 @@ a.head:hover{
                             {% assign leftpix=leftpix|plus: 35 %}
                             {% endfor %}
                         </div>
+			<!-- PROJECT CONTENT TEXT -->
                         <div class="project-text">
                             {{project.content}}
                         </div>
