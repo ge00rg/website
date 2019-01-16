@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<!-- news post layout, not really used -->
 <article {% if page.banner-img %}class="feature-image"{% endif %}>
     <header id="main" style="background-image: url('{{ site.baseurl }}/assets/img/banners/{{ page.banner-img }}')">
         <h2 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h2>
@@ -19,13 +20,6 @@ layout: default
         {% endif %}
     </section>
 </article>
-
-<!-- Disqus -->
-{% if site.theme_settings.disqus_shortname %}
-    <div class="comments">
-        {% include disqus.html %}
-    </div>
-{% endif %}
 
 <!-- Post navigation -->
 {% if site.theme_settings.post_navigation %}
