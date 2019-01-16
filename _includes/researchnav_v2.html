@@ -1,5 +1,6 @@
 {% assign research=site.pages|where: "title", "Research" %}
 {% assign research_headings=research[0].headings %}
+<!-- navigation element for research pages using svg-ellipses -->
 <div class="nav-venn">
 <a class="resnavlink" href="{{site.baseurl}}/research/inhibition"><div class="catwrap"><div class="cattext cat1text">{{research_headings[0]}}</div><img src="{{site.baseurl}}/assets/img/research/cat1.svg" class="venn ellipse cat1"></div></a>
 <a class="resnavlink" href="{{site.baseurl}}/research/plasticity"><div class="catwrap"><div class="cattext cat2text">{{research_headings[1]}}</div><img src="{{site.baseurl}}/assets/img/research/cat2.svg" class="venn ellipse cat2"></div></a>
