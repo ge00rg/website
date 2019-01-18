@@ -5,7 +5,7 @@ title: MKP # site's title
 description: "Modelling of Cognitive Processes" # used by search engines
 
 # TEXT
-heading: Mission Statement
+heading: #Mission Statement
 text: We investigate the neuronal basis of cognitive abilities such as perception, learning and memory, and decision making. To this end, we use mathematical and computational methods to bridge gaps between the microscopic level of synapses, neurons and neuronal networks and the cognitive level. A particular focus lies on how changes on the neuronal level — for example synaptic plasticity — allow our brain to dynamically adjust to environmental requirements.
 
 # THEME-SPECIFIC CONFIGURATION
