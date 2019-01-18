@@ -2,7 +2,7 @@
 layout: member_post
 title: Owen Mackwood
 img: "Owen18_crop.jpg"
-position: Postdoctoral Fellow
+position: Postdoctoral Researcher
 permalink: /owen/
 room: MAR 5.016
 tel: +49 30 314 24391
