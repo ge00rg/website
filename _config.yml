@@ -6,7 +6,7 @@ description: "Modelling of Cognitive Processes" # used by search engines
 
 # TEXT
 heading: #Mission Statement
-text: We investigate the neuronal basis of cognitive abilities such as perception, learning and memory, and decision making. To this end, we use mathematical and computational methods to bridge gaps between the microscopic level of synapses, neurons and neuronal networks and the cognitive level. A particular focus lies on how changes on the neuronal level — for example synaptic plasticity — allow our brain to dynamically adjust to environmental requirements.
+text: The goal of the Sprekeler lab is to use mathematical and computational tools to understand how the brain processes information and thereby generates intelligent behavior. In the last years, we have been very interested in how synaptic and other forms of plasticity can self-organize neural circuits to mediate learning, and in the role of inhibitory neurons in neuronal circuits. 
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
