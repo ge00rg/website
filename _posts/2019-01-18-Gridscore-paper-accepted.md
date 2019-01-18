@@ -1,5 +1,5 @@
 ---
 layout: post
-title: "Simon's paper on a new local grid score for grid cells has just been accepted! Congratulations!"
+title: "Simon's new paper has just been accepted! It presents a new local grid score for individual spikes of grid cells in entorhinal cortex. Congratulations!"
 ---
  
