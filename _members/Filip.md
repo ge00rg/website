@@ -2,7 +2,7 @@
 layout: member_post
 title: Filip Vercruysse
 img: "Filip18_crop.jpg"
-position: Postdoctoral Fellow
+position: Postdoctoral Researcher
 permalink: /filip/
 room: MAR 5.016
 tel: +49 30 314 24391
