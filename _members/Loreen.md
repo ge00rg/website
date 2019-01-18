@@ -2,7 +2,7 @@
 layout: member_post
 title: Loreen Hertäg
 img: "Loreen_crop.JPG"
-position: Postdoctoral Fellow
+position: Postdoctoral Researcher
 permalink: /loreen/
 room: MAR 5.015
 tel: +49 30 314 29873
