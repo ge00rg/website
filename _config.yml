@@ -5,7 +5,7 @@ title: MKP # site's title
 description: "Modelling of Cognitive Processes" # used by search engines
 
 # TEXT
-heading: #Mission Statement
+heading: Mission Statement
 text: The goal of the Sprekeler lab is to use mathematical and computational tools to understand how the brain processes information and thereby generates intelligent behavior. In the last years, we have been very interested in how synaptic and other forms of plasticity can self-organize neural circuits to mediate learning, and in the role of inhibitory neurons in neuronal circuits. 
 
 # THEME-SPECIFIC CONFIGURATION
