@@ -5,6 +5,7 @@ permalink: /contact/
 subtitle: How to Find Us
 banner-img: "contact_cut_scale.JPG"
 ---
+<p class="testing">test</p>
 <div id="desc">
 Our laboratory is in <b>Marchstraße 23</b>. When you leave the elevator on the 5th floor, take the corridor to your left all the way around the corner.
 </div>
