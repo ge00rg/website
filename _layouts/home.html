@@ -125,11 +125,11 @@ var j = 1;
 while(j < table.rows.length){
     cells = table.rows[j].cells;
     priority = cells[5].innerHTML;
-    priority_dt = new Date(priority);
+    priority_dt = new Date(priority.replace(/-/g,'/'));
     // fist take care of any talks with priority
     if (priority){
 	    if (priority_dt <= today){
-		    dat = new Date(cells[1].innerHTML);
+		    dat = new Date(cells[1].innerHTML.replace(/-/g,'/'));
 		    if(dat > today){
 			    // post all future talks whose priority date has passed (if they had one)
 			    // earlier dates come first
@@ -154,7 +154,7 @@ while(j < table.rows.length){
     cells = table.rows[j].cells;
     priority = cells[5].innerHTML;
     if (!priority){
-	    dat = new Date(cells[1].innerHTML);
+	    dat = new Date(cells[1].innerHTML.replace(/-/g,'/'));
 		    if(dat > today){
 			    // same as above, but for events without priority date.
 			    if(i < maxevents){
