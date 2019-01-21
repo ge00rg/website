@@ -43,6 +43,7 @@ banner-img: "events_cut_scale.JPG"
     var first_future_talk = 0;
     $('#cur_data tbody tr').each(function(){
     var test = $(this).find('td:eq(1)').text()
+    alert(test);
     var test_date = new Date(test);
     future = test_date >= today;
     if (future == true){return false}
