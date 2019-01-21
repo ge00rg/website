@@ -86,7 +86,7 @@ banner-img: "events_cut_scale.JPG"
 	      con = cells[6].innerHTML;
 	      urll = "'"+cells[7].innerHTML+"'";
 	      
-	      dt_obj = new Date(dt);
+	      dt_obj = new Date(dt.replace(/-/g,'/'));
 	      day = dt_obj.getDate();
   	      mon = monthNames[dt_obj.getMonth()];
 	      
