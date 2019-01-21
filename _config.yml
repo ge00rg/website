@@ -12,7 +12,7 @@ text: The goal of the Sprekeler lab is to use mathematical and computational too
 theme_settings:
   # Meta
   title: SPREKELER lab  # blog's title
-  avatar: assets/img/integral_finished.svg
+  avatar: assets/img/sigmoid_finished_c.svg
   favicon: assets/img/NewLogo_ver1.png
   gravatar: # Email MD5 hash
 
