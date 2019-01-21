@@ -6,7 +6,7 @@ banner-img: "team_cut_scale.JPG"
 position-order:
     - Principal Investigator
     - Secretary
-    - Postdoctoral Fellow
+    - Postdoctoral Researcher
     - PhD Student
     - Master Student
     - Alumnus
