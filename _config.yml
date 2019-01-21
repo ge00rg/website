@@ -18,7 +18,7 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p>asdasd</p>
+     <p></p>
   header_text_feature_image: assets/img/march.JPG
   footer_text: >
     <a href="https://www.cognition.tu-berlin.de/menue/teaching/">Teaching</a> | <a href="">Contact</a>
