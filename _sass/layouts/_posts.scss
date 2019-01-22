@@ -43,42 +43,6 @@ header {
     }
 }
 
-// elements used to manage space and style event-postings -->events.scss
-.speaker-span{
-    font-size: 1.3em;
-    white-space: pre;
-    text-transform: none;
-    color: $text-color;
-}
-.loc-span{
-    white-space: pre;
-    text-transform: none;
-    color: $text-color;
-    float: left;
-    clear: both;
-}
-.white-span{
-    white-space: pre;
-    text-transform: none;
-    color: $text-color;
-}
-.affil-span{
-    font-size: 1.3em;
-    white-space: pre;
-    text-transform: none;
-    color: rgba($text-color, 0.5);
-}
-.date-span{
-    float: left;
-    clear: both;
-}
-.back-button-events{
-	float:left; 
-	margin-bottom: 2.5em;}
-.speakeraffil{float:left;}
-.break-mobile{clear: both;}
-.event-title{margin-bottom: 0;}
-
 .meta {
     color: rgba($text-color, .5);
     font-size: 0.9em;
