@@ -11,22 +11,3 @@ h2.title {
     margin-top: 5px;
     text-shadow: 1px 1px 2px $text-shadow;
 }
-
-//#talkfig {id
-//  display: table;
-//  float: left;
-//  padding: 50px;
-//}
-
-//#talkcap {
- // display: table-caption;
- // caption-side: bottom;
- // text-align: center;
-//}	
-
-// responsiveness for events table --> events.scss
-@media screen and (max-width: 860px) {
-    .abstractbox{display:none;}
-    .talks .date{float: left;}
-    .talks .affil{display: block; display: none;}
-}
