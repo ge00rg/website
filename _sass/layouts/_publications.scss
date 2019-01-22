@@ -12,3 +12,12 @@
 .publications .extender{
     display:inline; 
     float: right;}
+
+// styling for links in publications table -->publications.scss
+.paperlink{
+          color: $text-color;
+}
+.paperlink:hover{
+    color: $text-color;
+    text-decoration: none;
+}
