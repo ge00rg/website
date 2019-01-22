@@ -206,6 +206,7 @@ header {
     }
 }
 
+// styles contact-info box on each member's page -->team.scss
 .contact-info {
     font-size: 0.8em;
     clear: both;
@@ -213,6 +214,8 @@ header {
     margin-left: 25px;
 }
 
+// these are for the svg-based navigation element on the research page -->researchnav.scss
+// links
 .resnavlink .resnavlink:hover, .resnavlink:visited {
           color:inherit;
           text-decoration: none;
@@ -311,18 +314,25 @@ header {
       z-index: 5;
     }
 
-
+// responsiveness for member-pages -->team.scss
 @media screen and (max-width: 800px) {
     .membertxt{clear: both;}
+	
+//responsiveness for research navigation -->researchnav.scss
+}
+@media screen and (max-width: 800px) {
+    .nav-venn{display: none;}
+}
+@media screen and (max-width: 1080px) {
+    .int1text{display: block;}
+    .int2text{display: block;}
+}
+
+//responsiveness for events page -->events.scss
+@media screen and (max-width: 800px) {
     .affil-span{display: block;}
     .speaker-span{display: block;}
     .loc-span{display: block;}
     .white-span{display: none;}
     .date-span{float: left; clear: both; white-space:nowrap;}
-    .nav-venn{display: none;}
-}
-
-@media screen and (max-width: 1080px) {
-    .int1text{display: block;}
-    .int2text{display: block;}
 }
