@@ -144,7 +144,7 @@
 .side_posts a:hover {
     color: #064579;
 }
-//events posts on home --> home.scss
+//events posts on home
 .side_events {
     width: 20%;
     position: absolute;
@@ -182,7 +182,7 @@
     color: #064579;
 }
 
-//responsive postings on home -->home.scss
+//responsive postings on home
 @media screen and (max-height: 450px) {
     .side_posts {padding-top: 15px;}
     .side_posts a {font-size: 18px;}
