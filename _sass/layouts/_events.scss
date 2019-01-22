@@ -34,3 +34,10 @@ display: -webkit-box;
 -webkit-line-clamp: 3; 
 -webkit-box-orient: vertical;
 }
+
+// responsiveness for events table
+@media screen and (max-width: 860px) {
+    .abstractbox{display:none;}
+    .talks .date{float: left;}
+    .talks .affil{display: block; display: none;}
+}
