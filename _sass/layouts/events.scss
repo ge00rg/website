@@ -1,0 +1,36 @@
+//talks-events table
+.talks {
+    overflow-x: hidden; 
+    table-layout: fixed; 
+    width: 100%;
+    overflow-x: hidden; 
+    border-collapse:collapse;}
+.talks tr{
+    border-bottom:1pt solid black; 
+    width: 100%;}
+.talks td{
+    border: none;
+    cursor: pointer;
+    width: 100%;}
+.talkss th{
+    border: none;
+    width: 100%;}
+.talks .extender{
+    display:inline; 
+    float: right;}
+.talks .spacer{
+    height: 10px; 
+    outline: none;}
+.talks figcaption{text-align: center;}
+.talks .event_date{
+    display:inline; 
+    color: lighten($text-color, 30%); 
+    text-transform: uppercase; 
+    font-size: 15px; 
+    float: right;}
+.abstractbox {
+overflow: hidden; 
+display: -webkit-box; 
+-webkit-line-clamp: 3; 
+-webkit-box-orient: vertical;
+}
