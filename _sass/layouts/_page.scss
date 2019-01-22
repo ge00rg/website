@@ -66,35 +66,47 @@ h2.title {
     text-transform: uppercase; 
     font-size: 15px; 
     float: right;}
-
-//Shared css in _post.scss
-
-#address {width:30%; float:left; padding-bottom: 15px;}
-#map {position: relative; hieght: 0; overflow: hidden; width:60%; float:right; padding-bottom: 50%; margin: 10px 0px 0px 0px;}
-#contact {width:30%; float:left; padding-top: 15px; padding-bottom: 30px;}
-#call {width:30%; float:left;}	
-#desc {padding-bottom: 15px;}
-
-#ifr {width: 100% !important; height: 100% !important; position: absolute; top: 0; left: 0;}
-
-#talkfig {
-  display: table;
-  float: left;
-  padding: 50px;
-}
-
-#talkcap {
-  display: table-caption;
-  caption-side: bottom;
-  text-align: center;
-}	
-
 .abstractbox {
 overflow: hidden; 
 display: -webkit-box; 
 -webkit-line-clamp: 2; 
 -webkit-box-orient: vertical;
 }
+
+//elements on the contact page -->contact.scss
+#address {
+    width:30%; 
+    float:left; 
+    padding-bottom: 15px;}
+#map {
+    position: relative; 
+    overflow: hidden; 
+    width:60%; 
+    float:right; 
+    padding-bottom: 50%; 
+    margin: 10px 0px 0px 0px;}
+#contact {
+    width:30%; 
+    float:left; 
+    padding-top: 15px; 
+    padding-bottom: 30px;}
+#call {
+    width:30%; 
+    float:left;}	
+#desc {padding-bottom: 15px;}
+#ifr {width: 100% !important; height: 100% !important; position: absolute; top: 0; left: 0;}
+
+//#talkfig {id
+//  display: table;
+//  float: left;
+//  padding: 50px;
+//}
+
+//#talkcap {
+ // display: table-caption;
+ // caption-side: bottom;
+ // text-align: center;
+//}	
 
 @media screen and (min-width: 860px) {
     #call{clear: both}
@@ -114,7 +126,7 @@ display: -webkit-box;
     .talks .date{float: left;}
     .talks .affil{display: block; display: none;}
 
-    #talkfig {clear: left;}
+    //#talkfig {clear: left;}
 
     		
 }
