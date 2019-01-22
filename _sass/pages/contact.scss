@@ -20,3 +20,21 @@
     float:left;}	
 #desc {padding-bottom: 15px;}
 #ifr {width: 100% !important; height: 100% !important; position: absolute; top: 0; left: 0;}
+
+// responsiveness for contact-page -->contact.scss
+@media screen and (min-width: 860px) {
+    #call{clear: both}
+}
+@media screen and (min-width: 1164px) {
+    #call{clear: none}
+}
+@media screen and (max-width: 860px) {
+    #address {clear: both; width: 100%; margin: 30px 0px 0px 0px;}
+    #map {clear: both; width: 100%; padding-top: 15px; margin: 30px 0px 0px 0px;}
+    #contact {width:45%}
+    #call {width:45%; float:right; padding-top: 15px;}
+
+    
+
+    //#talkfig {clear: left;}  		
+}
