@@ -1,0 +1,22 @@
+//elements on the contact page
+#address {
+    width:30%; 
+    float:left; 
+    padding-bottom: 15px;}
+#map {
+    position: relative; 
+    overflow: hidden; 
+    width:60%; 
+    float:right; 
+    padding-bottom: 50%; 
+    margin: 10px 0px 0px 0px;}
+#contact {
+    width:30%; 
+    float:left; 
+    padding-top: 15px; 
+    padding-bottom: 30px;}
+#call {
+    width:30%; 
+    float:left;}	
+#desc {padding-bottom: 15px;}
+#ifr {width: 100% !important; height: 100% !important; position: absolute; top: 0; left: 0;}
