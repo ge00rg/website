@@ -12,36 +12,60 @@ h2.title {
     text-shadow: 1px 1px 2px $text-shadow;
 }
 
+// styling for links in publications table -->publications.scss
 .paperlink{
-    color: $text-color;
+          color: $text-color;
 }
 .paperlink:hover{
     color: $text-color;
     text-decoration: none;
 }
 
-.publications {overflow-x: hidden; table-layout: fixed; width: 100%;}
-.publications tr{  border-bottom:1pt solid black; width: 100%;}
+// publications table --> publications.scss
+.publications {
+    overflow-x: hidden; 
+    table-layout: fixed; 
+    width: 100%;}
+.publications tr{
+    border-bottom:1pt solid black; 
+    width: 100%;}
 .publications td{border: none;}
 .publications th{border: none;}
 .publications td{cursor: pointer;}
-.publications .extender{display:inline; float: right;}
+.publications .extender{
+    display:inline; 
+    float: right;}
 
-.talks {overflow-x: hidden; table-layout: fixed; width: 100%;}
-.talks tr{  border-bottom:1pt solid black; width: 100%;}
-.talks td{border: none;}
-.talkss th{border: none;}
-.talks td{cursor: pointer;}
-.talks .extender{display:inline; float: right;}
-
-.talks table{overflow-x: hidden; border-collapse:collapse;}
-.talks tr{  border-bottom:1pt solid black;}
-.talks .spacer{height: 10px; outline: none;}
-.talks td{border: none; width: 100%;}
-.talks th{border: none; width: 100%;}
-.talks td{cursor: pointer;}
+//talks-events table --> events.scss
+.talks {
+    overflow-x: hidden; 
+    table-layout: fixed; 
+    width: 100%;
+    overflow-x: hidden; 
+    border-collapse:collapse;}
+.talks tr{
+    border-bottom:1pt solid black; 
+    width: 100%;}
+.talks td{
+    border: none;
+    cursor: pointer;
+    width: 100%;}
+.talkss th{
+    border: none;
+    width: 100%;}
+.talks .extender{
+    display:inline; 
+    float: right;}
+.talks .spacer{
+    height: 10px; 
+    outline: none;}
 .talks figcaption{text-align: center;}
-.talks .event_date{display:inline; color: lighten($text-color, 30%); text-transform: uppercase; font-size: 15px; float: right;}
+.talks .event_date{
+    display:inline; 
+    color: lighten($text-color, 30%); 
+    text-transform: uppercase; 
+    font-size: 15px; 
+    float: right;}
 
 //Shared css in _post.scss
 
