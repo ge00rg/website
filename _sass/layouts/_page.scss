@@ -21,21 +21,6 @@ h2.title {
     text-decoration: none;
 }
 
-// publications table --> publications.scss
-.publications {
-    overflow-x: hidden; 
-    table-layout: fixed; 
-    width: 100%;}
-.publications tr{
-    border-bottom:1pt solid black; 
-    width: 100%;}
-.publications td{border: none;}
-.publications th{border: none;}
-.publications td{cursor: pointer;}
-.publications .extender{
-    display:inline; 
-    float: right;}
-
 //talks-events table --> events.scss
 .talks {
     overflow-x: hidden; 
