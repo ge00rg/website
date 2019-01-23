@@ -115,12 +115,3 @@ header {
         vertical-align: middle;
     }
 }
-
-//responsiveness for events page -->events.scss
-@media screen and (max-width: 800px) {
-    .affil-span{display: block;}
-    .speaker-span{display: block;}
-    .loc-span{display: block;}
-    .white-span{display: none;}
-    .date-span{float: left; clear: both; white-space:nowrap;}
-}
