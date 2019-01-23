@@ -96,3 +96,13 @@
       opacity:1;
       z-index: 5;
     }
+
+//responsiveness for research navigation -->researchnav.scss
+}
+@media screen and (max-width: 800px) {
+    .nav-venn{display: none;}
+}
+@media screen and (max-width: 1080px) {
+    .int1text{display: block;}
+    .int2text{display: block;}
+}
