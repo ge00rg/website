@@ -68,14 +68,15 @@ display: -webkit-box;
 	float:left; 
 	margin-bottom: 2.5em;}
 .speakeraffil{float:left;}
-.break-mobile{clear: both;}
 .event-title{margin-bottom: 0;}
 
 // responsiveness for events table
 @media screen and (max-width: 860px) {
     .abstractbox{display:none;}
     .talks .date{float: left;}
-    .talks .affil{display: block; display: none;}
+    .talks .affil{
+	    display: block; 
+	    display: none;}
 }
 //responsiveness for events pages
 @media screen and (max-width: 800px) {
@@ -83,5 +84,8 @@ display: -webkit-box;
     .speaker-span{display: block;}
     .loc-span{display: block;}
     .white-span{display: none;}
-    .date-span{float: left; clear: both; white-space:nowrap;}
+    .date-span{
+	    float: left; 
+	    clear: both; 
+	    white-space:nowrap;}
 }
