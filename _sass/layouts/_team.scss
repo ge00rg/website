@@ -9,7 +9,35 @@
     display: inline-block; 
     width: 195px;
 }
+//back-buttons on member-pages
+.back-button-wide{float: right;}
+.back-button-narrow{
+    float: left; 
+    margin-bottom: 0.8em; 
+    display: none;}
+    .member-container{
+    float: left;
+}
+
+// for member images
+.memberimg{
+    float: left;
+    width: 250px;
+}
+.memberimg img{
+    display: block;
+    width: 100%;
+    border-radius: 15%/5%;
+}
+.membertxt{
+    overflow: hidden;
+}
 // responsiveness for member-pages
 @media screen and (max-width: 800px) {
     .membertxt{clear: both;}
+}
+@media screen and (max-width: 768px){
+    .back-button-wide{display: none;}
+    .back-button-narrow{display: block;}
+    .member-title{margin-bottom: 0;}
 }
