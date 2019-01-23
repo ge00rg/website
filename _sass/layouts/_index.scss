@@ -31,7 +31,13 @@
         margin-bottom: 0;
     }
 }
-
+feature-image header{
+    background-image: url('{{ site.baseurl }}/assets/img/banners/{{ page.banner-img }}')
+    }
+@media screen and (max-width: 800px) {
+    .feature-image header{background-image: url('')}
+}
+	@media screen and (min-width: 800px){.opening-text{ margin-bottom: 6em;} }
 #main {
     background-position: 100% 0, 0 center, center top;
 }
