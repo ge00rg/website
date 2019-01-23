@@ -33,11 +33,9 @@
     overflow: hidden;
 }
 // responsiveness for member-pages
-@media screen and (max-width: 800px) {
-    .membertxt{clear: both;}
-}
 @media screen and (max-width: 768px){
     .back-button-wide{display: none;}
     .back-button-narrow{display: block;}
     .member-title{margin-bottom: 0;}
+    .membertxt{clear: both;}
 }
