@@ -1,0 +1,52 @@
+.b2t_link{
+        float: right;
+        font-size: 15px;
+        color: #729ABD;    
+    }
+// little member images next to projects
+.speakerfloat {
+  position: absolute;
+  top: 10px;
+  margin-left: 20px;
+  border-radius: 50%;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 50px;
+  -webkit-box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.75);
+  transition: transform .2s;
+}
+.speakerfloat:hover{
+    transform: scale(1.5);
+    z-index: 5;
+}
+    a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+a.head {
+    text-decoration: none;
+    color: #383838;
+}
+a.head:hover{
+    text-decoration: none;
+    color: #383838;
+}
+.link-list{
+    list-style: none;
+    text-align: left;
+    margin-left: 50px;
+}
+//responsiveness for member-images next to projects
+@media screen and (max-width: 780px) {
+    .speakerfloat{margin-left: 30px;}
+    .project-text{clear: both;}
+}
+@media only screen and (max-width: 600px) {
+    .speakerfloat {
+        background-color: lightblue;
+    }
+}
