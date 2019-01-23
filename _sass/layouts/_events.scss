@@ -77,3 +77,11 @@ display: -webkit-box;
     .talks .date{float: left;}
     .talks .affil{display: block; display: none;}
 }
+//responsiveness for events pages
+@media screen and (max-width: 800px) {
+    .affil-span{display: block;}
+    .speaker-span{display: block;}
+    .loc-span{display: block;}
+    .white-span{display: none;}
+    .date-span{float: left; clear: both; white-space:nowrap;}
+}
