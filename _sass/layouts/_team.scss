@@ -5,3 +5,8 @@
     float: left;
     margin-left: 25px;
 }
+
+// responsiveness for member-pages
+@media screen and (max-width: 800px) {
+    .membertxt{clear: both;}
+}
