@@ -19,11 +19,11 @@ layout: default
         <div class="meta">
         {% assign time=page.date|date: "%R" %}
         {% if time=="00:00" %}
-            {% if page.speaker %}  <div class="speakeraffil" style="float:left;"><span class="speaker-span">by {{ page.speaker }}</span> <span class="affil-spanx"> [{{page.affiliation}}]</span></div>{% endif %}
+            {% if page.speaker %}  <div class="speakeraffil"><span class="speaker-span">by {{ page.speaker }}</span> <span class="affil-spanx"> [{{page.affiliation}}]</span></div>{% endif %}
             <div class="date-span">{{ page.date | date: "%B %-d, %Y" }}</div>
             {% if page.location %}<div class="loc-span">{{page.location}}</div>{% endif %}
         {% else %}
-            {% if page.speaker %}  <div class="speakeraffil" style="float:left;"><span class="speaker-span">by {{ page.speaker }}</span> <span class="affil-spanx"> [{{page.affiliation}}]</span></div>{% endif %}
+            {% if page.speaker %}  <div class="speakeraffil"><span class="speaker-span">by {{ page.speaker }}</span> <span class="affil-spanx"> [{{page.affiliation}}]</span></div>{% endif %}
             <div class="date-span">{{ page.date | date: "%B %-d, %Y  %R" }}</div>
             {% if page.location %}<div class="loc-span">{{page.location}}</div>{% endif %}
         {% endif %}
