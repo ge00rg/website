@@ -1,13 +1,20 @@
+<style>
+	.inner-content{clear: both;}
+	.project{
+		clear: both; 
+		overflow-wrap: normal; 
+		padding-bottom: 30px;}
+</style>
 <div class="content">
     {% for heading in page.headings %}
     <!--create research entries for each existing category -->
-        <div style="clear: both;">
+        <div class="inner-content">
             <a id="{{heading}}" class="anchor"></a>
             <h2><u>{{heading}}</u></h2>
             {% for project in site.research %}
 	    <!-- list all projects whose first category matches heading here -->
                 {% if project.parents[0] == heading %}
-                    <div style="clear: both; overflow-wrap: normal; padding-bottom: 30px;">
+                    <div class="project">
                         <h3 style="margin-bottom: 0;">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
 			<!--make author-links-->
                         <h5 style="margin-bottom: 0px;">
