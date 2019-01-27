@@ -23,7 +23,7 @@ layout: page
 <!-- everything else is like in _includes/research_main.html -->
 {% for project in site.research %}
   {% if project.parents==used_headings %}
-     <div style="clear: both; overflow-wrap: normal; padding-bottom: 30px;">
+     <div class="project">
                         <h3 style="margin-bottom: 0;">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
                         <h5 style="margin-bottom: 0px;">
                             {% assign i=0 %}
