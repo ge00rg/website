@@ -4,6 +4,9 @@
 		clear: both; 
 		overflow-wrap: normal; 
 		padding-bottom: 30px;}
+	.project-heading{
+		margin-bottom: 0;
+		padding-left: 0;}
 </style>
 <div class="content">
     {% for heading in page.headings %}
@@ -15,7 +18,7 @@
 	    <!-- list all projects whose first category matches heading here -->
                 {% if project.parents[0] == heading %}
                     <div class="project">
-                        <h3 style="margin-bottom: 0;">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
+                        <h3 class="project-heading">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
 			<!--make author-links-->
                         <h5 style="margin-bottom: 0px;">
                             {% assign i=0 %}
