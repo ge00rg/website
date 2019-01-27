@@ -69,8 +69,8 @@ layout: page
 
   {% elsif project.parents==used_headings_rev %}
      <div class="project">
-                        <h3 style="margin-bottom: 0;">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
-                        <h5 style="margin-bottom: 0px;">
+                        <h3 class="project-heading">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
+                        <h5 class="author-heading">
                             {% assign i=0 %}
                             {% assign authors=project.authors %}
                             {% for author in authors %}
@@ -80,13 +80,13 @@ layout: page
                                     {% endif %}
                                 {% endfor %}
                                 {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-                                <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk" style="color: DarkGray;">{{author}}</a>
+                                <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
                                 {% assign i=i | plus: 1 %}
                             {% endfor %}
                         </h5>
-                    <div style="position: relative;">
+                    <div class="project-img-container">
                         {% if project.image %}
-                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" style="float: left; padding: 50px 20px 10px 0px; height: 250px; min-height: 250xpx;">
+                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; height: 250px;">
                         {% endif %}
@@ -117,9 +117,9 @@ layout: page
 {% else %}
     {% for project in site.research %}
   {% if project.parents contains used_headings[0] %}
-     <div style="clear: both; overflow-wrap: normal; padding-bottom: 30px;">
-                        <h3 style="margin-bottom: 0;">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
-                        <h5 style="margin-bottom: 0px;">
+     <div class="project">
+                        <h3 class="project-heading">{{project.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
+                        <h5 class="author-heading">
                             {% assign i=0 %}
                             {% assign authors=project.authors %}
                             {% for author in authors %}
@@ -129,13 +129,13 @@ layout: page
                                     {% endif %}
                                 {% endfor %}
                                 {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-                                <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk" style="color: DarkGray;">{{author}}</a>
+                                <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
                                 {% assign i=i | plus: 1 %}
                             {% endfor %}
                         </h5>
-                    <div style="position: relative;">
+                    <div class="project-img-container">
                         {% if project.image %}
-                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" style="float: left; padding: 50px 20px 10px 0px; width: 350px; min-height: 250xpx;">
+                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
                         {% endif %}
