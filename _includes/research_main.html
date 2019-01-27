@@ -14,6 +14,12 @@
 		color: DarkGray;
 	}
 	.authorlink:hover{color: DarkGray;}
+	.project-img-container{position: relative;}
+	.project-img{
+		float: left; 
+		padding: 50px 20px 0px 0px; 
+		width: 350px; 
+		min-height: 250xpx;}
 </style>
 <div class="content">
     {% for heading in page.headings %}
@@ -42,9 +48,9 @@
                             {% endfor %}
                         </h5>
 		    <!--project image-->
-                    <div style="position: relative;">
+                    <div class="project-img-container">
                         {% if project.image %}
-                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" style="float: left; padding: 50px 20px 0px 0px; width: 350px; min-height: 250xpx;">
+                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
                         {% endif %}
