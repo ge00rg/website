@@ -1,3 +1,26 @@
+// layout elements of research pages
+.inner-content{clear: both;}
+	.project{
+		clear: both; 
+		overflow-wrap: normal; 
+		padding-bottom: 30px;}
+	.project-heading{
+		margin-bottom: 0;
+		padding-left: 0;}
+	.author-heading{
+		margin-bottom: 0;
+	}
+	.authorlink{
+		color: DarkGray;
+	}
+	.authorlink:hover{color: DarkGray;}
+	.project-img-container{position: relative;}
+	.project-img{
+		float: left; 
+		padding: 50px 20px 0px 0px; 
+		width: 350px; 
+		min-height: 250xpx;}
+
 .b2t_link{
         float: right;
         font-size: 15px;
