@@ -245,4 +245,32 @@ To change the impressum page, edit `pages/impressum.md` (plain markdown).
 
 <a name="notes"></a>
 ## 11. Notes for later Webmasters
-I hope that I leave the website in a readable and maintainable state for you. I you, like me, are not an expert at webdesign, and if you havent done so already, familiarize yourself with the tools used to create this website, as discribed under [General](#general).
+I hope that I leave the website in a readable and maintainable state for you. I you, like me, are not an expert at webdesign, and if you havent done so already, familiarize yourself with the tools used to create this website, as discribed under [General](#general), most importantly Jekyll. This section is not intended as an exhaustive explanation of every detail about how the site works, but more of a primer of its structure.
+
+### HTML and Organization
+Most of the pages are generated from the folder `pages`. Files there might use a YAML entry `layout` which specifies a layout that you will find in the `_layouts` folder. Also they might use additional external HTML file with the liquid statement `{% include file_xy.html %}`. You will find these include-files in `_includes`.
+Additionally, pages are generated from files in co-called collections. These collections are declared in `_config.yml` as follows:
+```yaml
+# COLLECTIONS
+collections:
+  members:
+    output: true
+    permalink: /:collection/:name
+  talks:
+    output: true
+    permalink: /:collection/:name
+  research:
+    output: true
+    permalink: /:collection/:name
+```
+You see that `_members` `_talks` and `_research` are folders declared as collections. Which means that from every `.md` file in them   will create a html file that will be served once the site is deployed. Everything about layouts and inclueds applies here as well.
+
+All html pages except `index.html` are generated from `.md` files. As explained above, these files may have a YAML header in which varaibles to be used later can be specified. Under the YAML header there can be formatted text, html, javascript and liquidscript. For details, consult the documentations of these langauges and Jekyll.
+
+### CSS
+All of the custom css (except where it has to be used inline) is in either `_sass/_includes` or `_sass/_layouts`. Those files are registered in `_sass/type-on-strap.scss` and are combined into one big `.css` file before deployment, meaning that the css there affects all pages, not just the one they share a name with.
+
+Usually the `.scss` file has the same name as the `md/html` file where it is used, except in cases where the same css in used in multiple files. It should be intuitive what file that is - if not, simply search through `_sass/_includes` and `_sass/_layouts` to find the class you are looking for.
+
+### JS
+Custom Javascript is used on four occasions - on `pages/5_events.md` (and `pages/events-archive.md`) to couple the visual effects of the authornames- and images throighout the site. Also, it is used on `pages/4_events.md` in conjunction with the `truncate`-class to make the show more/show less- button work. The final two times are to separate past from future dates on the home page and on the events page. To this end, an invisible table with all eventsd down to a certain cutoff-date in the past is created with liquidscript (in order to make use of Jekyll's YAML-parsing abilities) and then JS is used to separate past from future and put the correct events where they belong.
