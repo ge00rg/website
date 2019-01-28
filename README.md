@@ -245,4 +245,4 @@ To change the impressum page, edit `pages/impressum.md` (plain markdown).
 
 <a name="notes"></a>
 ## 11. Notes for later Webmasters
-tbd
+I hope that I leave the website in a readable and maintainable state for you. I you, like me, are not an expert at webdesign, and if you havent done so already, familiarize yourself with the tools used to create this website, as discribed under [General](#general).
