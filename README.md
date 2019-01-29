@@ -34,7 +34,7 @@ You don't have to read all of this if you want to make a change or contribution 
 <a name="general"></a>
 ## 1. General
 
-The website is built using **Jekyll**, a Ruby based static website generator. It makes use of **YAML**, **markdown** and **LiquidScript** to generate websites. The use of YAML and markdown makes it easy to edit and create content for the website without coding explicit html.
+The website is built using **Jekyll**, a Ruby based static website generator asn is based off the Type-on-Strap template. It makes use of **YAML**, **markdown** and **LiquidScript** to generate websites. The use of YAML and markdown makes it easy to edit and create content for the website without coding explicit html.
 
 You can find the documentation of Jekyll [here](https://jekyllrb.com/docs/), the YAML documentation [here](https://jekyllrb.com/docs/front-matter/) and the LiquidScript documentation [here](https://jekyllrb.com/docs/liquid/).
 
