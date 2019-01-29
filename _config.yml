@@ -13,7 +13,7 @@ theme_settings:
   # Meta
   title: SPREKELER lab  # blog's title
   avatar: assets/img/sigmoid_finished_c_f.svg
-  favicon: assets/img/sigmoid_finished_c_f.png
+  favicon: assets/img/sigmoid_c_f.png
   gravatar: # Email MD5 hash
 
   # Header and footer text
