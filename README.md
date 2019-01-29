@@ -276,3 +276,6 @@ Usually the `.scss` file has the same name as the `md/html` file where it is use
 Custom Javascript is used on four occasions - on `pages/5_events.md` (and `pages/events-archive.md`) to couple the visual effects of the authornames- and images throighout the site. Also, it is used on `pages/4_events.md` in conjunction with the `truncate`-class to make the show more/show less- button work. The final two times are to separate past from future dates on the home page and on the events page. To this end, an invisible table with all eventsd down to a certain cutoff-date in the past is created with liquidscript (in order to make use of Jekyll's YAML-parsing abilities) and then JS is used to separate past from future and put the correct events where they belong.
 
 If you have a question about anything, feel free to contact me.
+
+### Images
+All images used on the site are stored in `assets/img` where they can be found in the folder associated with the page they appear on; images that can't be assigned to one particular page, like logos, are found in the main `assets/img` folder. 
