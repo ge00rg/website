@@ -5,6 +5,10 @@
     width: 100%;
     color: lighten($text-color, 30%);
     font-size: 0.9em;
+    
+    column:hover {
+           transform: none;
+    }
 
     a {
         color: lighten($text-color, 30%);	
