@@ -1,7 +1,7 @@
 ---
 layout: member_post
 title: Mathias Schmerling
-position: PhD Student
+position: Alumni
 img: "Mathias18_crop.jpg"
 permalink: /mathias/
 room: MAR 5.015
