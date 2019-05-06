@@ -2,6 +2,7 @@
 layout: page
 title: Presynaptic Inhibition
 image: "diag_laura.jpg"
+permalink: /laura/
 parents:
     - Inhibition
 authors:
