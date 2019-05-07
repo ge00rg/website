@@ -1,11 +1,12 @@
 ---
 layout: page
+banner-img: jobs_cut_scale.JPG
+---
 {% for page in site.pages %}
     {% if page.title=='Research' %}
-        banner-img: {{page.banner-img}}
+        {{page.banner-img}}
     {% endif %}
 {% endfor %}
----
 <div class="project">
 			<!--make author-links-->
                         <h5 class="author-heading">
