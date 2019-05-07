@@ -8,7 +8,7 @@ banner-img: "jobs_cut_scale.JPG"
 <ul>
   {% for project in site.research %}
       {% assign authors=project.authors %}
-      {% assign display_current='True' %}
+      {% assign display_current='False' %}
       {% for author in authors %}
           {% for member in site.members %}
               {% if author==member.title %}
@@ -18,7 +18,7 @@ banner-img: "jobs_cut_scale.JPG"
               {% endif %}
           {% endfor %}
       {% endfor %}
-      {% if display_current='True' %}
+      {% if display_current=='True' %}
       <li>
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
