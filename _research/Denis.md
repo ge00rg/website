@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: research_project
 title: Memory transformations in a mechanistic model of systems memory consolidation
 permalink: /research/memory_transformations_in_a_mechanistic_model_of_systems_memory_consolidation
 force_current_projects: False
