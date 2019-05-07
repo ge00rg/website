@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: research_project
 title: Owen's Project
 permalink: /research/owens_project
 force_current_projects: False
