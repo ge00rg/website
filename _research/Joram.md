@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Perceptual Decision Making
+permalink: /research/perceptual_decision_making
+force_current_projects: False
 image: "joram_diag.png"
 parents:
     - Plasticity
