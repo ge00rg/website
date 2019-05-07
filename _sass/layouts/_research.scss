@@ -14,7 +14,8 @@
 		color: DarkGray;
 	}
 	.authorlink:hover{color: DarkGray;}
-        .inactive{cursor: default}
+        .inactive{cursor: default;}
+        .inactive:hover{text-decoration: none;}
 	.project-img-container{position: relative;}
 	.project-img{
 		float: left; 
