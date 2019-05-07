@@ -1,9 +1,14 @@
 ---
 layout: default
 ---
+{% for page in site.pages %}
+    {% if page.title=='Research' %}
+        {% assign banner=page.banner-img %}
+    {% endif %}
+{% endfor %}
 <style>
 .feature-image header{
-    background-image: url('{{ site.baseurl }}/assets/img/banners/jobs_cut_scale.JPG')
+	background-image: url('{{ site.baseurl }}/assets/img/banners/{{banner}}')
 }
 @media screen and (max-width: 800px) {
     .feature-image header{
