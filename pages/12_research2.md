@@ -8,17 +8,17 @@ banner-img: "jobs_cut_scale.JPG"
 <ul>
   {% for project in site.research %}
       {% assign authors=project.authors %}
-      {% assign display_current='False' %}
+      {% assign display_current='false' %}
       {% for author in authors %}
           {% for member in site.members %}
               {% if author==member.title %}
                   {% unless member.position=='Alumni' %}
-                      {% assign display_current='True' %}
+                      {% assign display_current='true' %}
                   {% endunless %}
               {% endif %}
           {% endfor %}
       {% endfor %}
-      {% if display_current=='True' or project.force_current_projects=='True' %}
+      {% if display_current=='true' or project.force_current_projects=='true' %}
       <li>
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
@@ -40,17 +40,17 @@ banner-img: "jobs_cut_scale.JPG"
 <ul>
   {% for project in site.research %}
       {% assign authors=project.authors %}
-      {% assign display_current='False' %}
+      {% assign display_current='false' %}
       {% for author in authors %}
           {% for member in site.members %}
               {% if author==member.title %}
                   {% unless member.position=='Alumni' %}
-                      {% assign display_current='True' %}
+                      {% assign display_current='true' %}
                   {% endunless %}
               {% endif %}
           {% endfor %}
       {% endfor %}
-      {% if display_current=='False' %}
+      {% if display_current=='false' %}
       <li>
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
