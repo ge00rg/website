@@ -3,7 +3,9 @@ layout: page
 banner-img: {{pages.1_research.banner-img}}
 ---
 {% for page in site.pages %}
-{{page}}
+{% if page.title==research %}
+{{page.title}}
+{% endif %}
 {% endfor %}
 <div class="project">
 			<!--make author-links-->
