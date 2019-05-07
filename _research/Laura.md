@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: research_project
 title: Presynaptic Inhibition
 permalink: /research/presynaptic_inhibition
 force_current_projects: False
