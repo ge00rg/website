@@ -1,12 +1,24 @@
 ---
 layout: page
-banner-img: jobs_cut_scale.JPG
 ---
 {% for page in site.pages %}
     {% if page.title=='Research' %}
-        {{page.banner-img}}
+        {% assign header-img=page.banner-img}
     {% endif %}
 {% endfor %}
+<style>
+.feature-image header{
+    background-image: url('{{ site.baseurl }}/assets/img/banners/{{ header-img }}')
+}
+@media screen and (max-width: 800px) {
+    .feature-image header{
+        background-image: url('')
+    }
+    .feature-image .title{color: #383838;}
+    .subtitle{display: none;}
+}
+</style>
+
 <div class="project">
 			<!--make author-links-->
                         <h5 class="author-heading">
