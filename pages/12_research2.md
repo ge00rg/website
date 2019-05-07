@@ -25,12 +25,16 @@ banner-img: "jobs_cut_scale.JPG"
       {% for author in authors %}
           {% for member in site.members %}
               {% if author==member.title %}
-                  {% assign url=member.permalink %}
                   {% assign position=member.position %}
+                  {% if position !='Alumni' %}
+                      {% assign url=member.permalink %}
+				          {% else %}
+				              {% assign url='/team/#alumni' %}
+				        {% endif %}
               {% endif %}
           {% endfor %}
           {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-         <a href="{% unless position=='Alumni' %}{{site.baseurl}}{{url}}{% endunless %}{% if position=='Alumni' %}javascript:;{% endif %}" class="author authorlink {% if position=='Alumni' %}inactive{% endif %}" id="{{author}}_lnk">{{author}}</a>
+         <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
           {% assign i=i | plus: 1 %}
       {% endfor %}
   </li>
@@ -59,11 +63,15 @@ banner-img: "jobs_cut_scale.JPG"
           {% for member in site.members %}
               {% if author==member.title %}
                   {% assign position=member.position %}
-                  {% assign url=member.permalink %}
+                  {% if position !='Alumni' %}
+                       {% assign url=member.permalink %}
+				          {% else %}
+				            {% assign url='/team/#alumni' %}
+				        {% endif %}
               {% endif %}
           {% endfor %}
           {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-          <a href="{% unless position=='Alumni' %}{{site.baseurl}}{{url}}{% endunless %}{% if position=='Alumni' %}javascript:;{% endif %}" class="author authorlink {% if position=='Alumni' %}inactive{% endif %}" id="{{author}}_lnk">{{author}}</a>
+          <a href="{{site.baseurl}}{{url}}" class="author authorlink " id="{{author}}_lnk">{{author}}</a>
           {% assign i=i | plus: 1 %}
       {% endfor %}
   </li>
