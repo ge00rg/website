@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: research_project
 title: Models of Spatial Representation
 permalink: /research/models_of_spatial_representation
 force_current_projects: False
