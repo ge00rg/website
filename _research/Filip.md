@@ -4,7 +4,6 @@ title: Burst  Control  in  Cortical  Circuits
 permalink: /research/burst_control_in_cortical_circuits
 force_current_projects: False
 image: "diag_filip.jpg"
-banner-img: jobs_cut_scale.JPG
 parents:
     - Inhibition
     - Plasticity
