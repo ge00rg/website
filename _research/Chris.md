@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Plasticity in a Pathological Network
+permalink: /research/plasticity_in_a_pathological_network
+force_current_projects: False
 image: "chris_diag.png"
 parents:
     - Plasticity
