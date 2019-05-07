@@ -39,11 +39,15 @@ layout: default
                                 {% for member in site.members %}
                                     {% if author==member.title %}
 					{% assign position=member.position %}
-                                        {% assign url=member.permalink %}
+				        {% if position !='Alumni' %}
+                                            {% assign url=member.permalink %}
+				        {% else %}
+				            {% assign url='/team/#alumni' %}
+				        {% endif %}
                                     {% endif %}
                                 {% endfor %}
                                 {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-                                <a href="{% unless position=='Alumni' %}{{site.baseurl}}{{url}}{% endunless %}{% if position=='Alumni' %}javascript:;{% endif %}" class="author authorlink {% if position=='Alumni' %}inactive{% endif %}" id="{{author}}_lnk">{{author}}</a>
+                                <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
                                 {% assign i=i | plus: 1 %}
                             {% endfor %}
                         </h5>
@@ -59,13 +63,18 @@ layout: default
                         {% for author in page.authors %}
                             {% for member in site.members %}
                                 {% if author==member.title %}
-                                    {% assign url=member.permalink %}
+			            {% assign position=member.position %}
+                                    {% if position !='Alumni' %}
+                                            {% assign url=member.permalink %}
+				        {% else %}
+				            {% assign url='/team/#alumni' %}
+				        {% endif %}
                                     {% assign img=member.img %}
                                 {% endif %}
                             {% endfor %}
                             <div style="position:absolute; min-width:100px;">
-                            <a href="{% if position!='Alumni' %}{{site.baseurl}}/{{url}}{% else %}javascript:;{% endif %}">
-                                <img class="author speakerfloat {%if position=='Alumni' %}inactive{% endif %}" id="{{author}}_flt" src="{{site.baseurl}}/assets/img/members/{{img}}" style="left: {{leftpix}}px;">
+                            <a href="{{site.baseurl}}/{{url}}">
+                                <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/assets/img/members/{{img}}" style="left: {{leftpix}}px;">
                             </a>
                             </div>
                             {% assign leftpix=leftpix|plus: 35 %}
