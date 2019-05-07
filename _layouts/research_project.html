@@ -1,8 +1,33 @@
 ---
 layout: page
-banner-img: jobs_cut_scale.JPG
 ---
+<style>
+.feature-image header{
+    background-image: url('{{ site.baseurl }}/assets/img/banners/jobs_cut_scale.JPG')
+}
+@media screen and (max-width: 800px) {
+    .feature-image header{
+        background-image: url('')
+    }
+    .feature-image .title{color: #383838;}
+    .subtitle{display: none;}
+}
+</style>
+<!-- basic page -->
 
+<!--banner and title -->
+<article {% if page.banner-img %}class="feature-image"{% endif %}>
+    <header id="main">
+        <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
+            {{ page.title }}
+        </h1>
+    
+        {% if page.subtitle %}
+            <h2 align="left" class="subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+      
+    </header>
+    <!-- content -->
 <div class="project">
 			<!--make author-links-->
                         <h5 class="author-heading">
@@ -48,6 +73,8 @@ banner-img: jobs_cut_scale.JPG
                             {{page.content}}
                         </div>
                     </div>
+	</article>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 var dct = {"lnk": "flt", "flt": "lnk"};
