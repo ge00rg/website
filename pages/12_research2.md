@@ -63,7 +63,7 @@ banner-img: "jobs_cut_scale.JPG"
               {% endif %}
           {% endfor %}
           {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-          <a href="{% unless position=='Alumni' %}{{site.baseurl}}{{url}}{% endunless %}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
+          <a href="{% unless position=='Alumni' %}{{site.baseurl}}{{url}}{% endunless %}{% if position=='Alumni' %}#{% endif %}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
           {% assign i=i | plus: 1 %}
       {% endfor %}
   </li>
