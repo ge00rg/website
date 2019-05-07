@@ -12,7 +12,7 @@ banner-img: "jobs_cut_scale.JPG"
       {% for author in authors %}
           {% for member in site.members %}
               {% if author==member.title %}
-                  {% unless member.position='Alumni' %}
+                  {% unless member.position=='Alumni' %}
                       {% assign display_current='True' %}
                   {% endunless %}
               {% endif %}
