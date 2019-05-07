@@ -36,6 +36,9 @@ banner-img: "jobs_cut_scale.JPG"
   {% endif %}
   {{project.force_current_projects}}
   {% if project.force_current_projects=='true' %}
+  asdasd
+  {% endif %}
+  {% if project.force_current_projects=='true' %}
       <li>
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
