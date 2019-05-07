@@ -1,7 +1,7 @@
 --- 
 layout: page
 title : Research 
-permalink: /research2/
+permalink: /research/
 banner-img: "jobs_cut_scale.JPG"
 ---
 <h2><u>Current Projects</u></h2>
