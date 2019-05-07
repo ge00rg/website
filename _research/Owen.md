@@ -2,7 +2,7 @@
 layout: research_project
 title: Owen's Project
 permalink: /research/owens_project
-force_current_projects: False
+force_current_projects: "false"
 image: "qm.png"
 parents:
     - Plasticity
