@@ -38,6 +38,7 @@ layout: default
                             {% for author in authors %}
                                 {% for member in site.members %}
                                     {% if author==member.title %}
+					{% assign position=member.position %}
                                         {% assign url=member.permalink %}
                                     {% endif %}
                                 {% endfor %}
