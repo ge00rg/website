@@ -20,7 +20,7 @@ layout: page
 		    <!--project image-->
                     <div class="project-img-container">
                         {% if page.image %}
-                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img">
+                            <img src="{{site.baseurl}}/assets/img/research/{{page.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
                         {% endif %}
@@ -46,3 +46,37 @@ layout: page
                             {{page.content}}
                         </div>
                     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+var dct = {"lnk": "flt", "flt": "lnk"};
+$('.author').each(function() {
+    var ele = $(this).attr('id').slice(0,-3);
+    var type = $(this).attr('id').slice(-3)
+    var trigger = ele.concat(dct[type]);
+    var tp = ele.concat(type)
+   $(this).hover( function(){
+       if (type == 'lnk') {
+           //$(this).css('text-decoration', 'underline');
+	   $("[id='"+tp+"']").css('text-decoration', 'underline');
+           $("[id='"+trigger+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
+       }
+       else {
+            //$(this).css({'transform': 'scale(1.5)', 'z-index': '5'});
+           $("[id='"+tp+"']").css({'transform': 'scale(1.5)', 'z-index': '5'});
+           $("[id='"+trigger+"']").css('text-decoration', 'underline');
+       }
+   },
+   function(){
+      if (type == 'lnk') {
+           $("[id='"+trigger+"']").css({'transform': 'none', 'z-index': '1'});
+           $("[id='"+tp+"']").css('text-decoration', 'none');
+            //$(this).css('text-decoration', 'none');
+       }
+       else {
+           $("[id='"+trigger+"']").css('text-decoration', 'none');
+           $("[id='"+tp+"']").css({'transform': 'none', 'z-index': '1'});
+            //$(this).css({'transform': 'none', 'z-index': '1'});
+       }
+   });
+});
+</script>
