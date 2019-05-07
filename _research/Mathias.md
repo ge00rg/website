@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Sensory Representations and Reinforcement Learning
+permalink: /research/sensory_representations_and_reinforcement_learning
+force_current_projects: False
 image: "mathias_diag2.png"
 parents:
     - Behavior
