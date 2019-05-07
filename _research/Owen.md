@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Owen's Project
+permalink: /research/owens_project
+force_current_projects: False
 image: "qm.png"
 parents:
     - Plasticity
