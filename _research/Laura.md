@@ -2,7 +2,7 @@
 layout: research_project
 title: Presynaptic Inhibition
 permalink: /research/presynaptic_inhibition
-force_current_projects: False
+force_current_projects: "false"
 image: "diag_laura.jpg"
 parents:
     - Inhibition
