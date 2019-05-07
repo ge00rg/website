@@ -16,7 +16,7 @@ layout: default
 <!-- basic page -->
 
 <!--banner and title -->
-<article {% if page.banner-img %}class="feature-image"{% endif %}>
+<article class="feature-image">
     <header id="main">
         <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
             {{ page.title }}
