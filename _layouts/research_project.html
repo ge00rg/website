@@ -1,12 +1,11 @@
+---
+layout: page
+---
 {% for page in site.pages %}
     {% if page.title=='Research' %}
         {% assign header-img=page.banner-img %}
     {% endif %}
 {% endfor %}
----
-layout: page
-banner-img: header-img
----
 <style>
 .feature-image header{
     background-image: url('{{ site.baseurl }}/assets/img/banners/{{ header-img }}')
@@ -20,7 +19,7 @@ banner-img: header-img
 }
 </style>
 
-<article {% if page.banner-img %}class="feature-image"{% endif %}>
+<article {% if header-img %}class="feature-image"{% endif %}>
     <header id="main">
         <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
             {{ page.title }}
