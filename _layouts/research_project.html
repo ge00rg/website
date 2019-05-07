@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 {% for page in site.pages %}
     {% if page.title=='Research' %}
@@ -19,7 +19,19 @@ layout: default
 }
 </style>
 
-{{header-img}}
+<article {% if page.banner-img %}class="feature-image"{% endif %}>
+    <header id="main">
+        <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
+            {{ page.title }}
+        </h1>
+    
+        {% if page.subtitle %}
+            <h2 align="left" class="subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+      
+    </header>
+</article>
+
 <div class="project">
 			<!--make author-links-->
                         <h5 class="author-heading">
