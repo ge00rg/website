@@ -1,12 +1,11 @@
 ---
 layout: page
-banner-img: {{pages.1_research.banner-img}}
----
 {% for page in site.pages %}
-{% if page.title=='Research' %}
-{{page.title}}
-{% endif %}
+    {% if page.title=='Research' %}
+        banner-img: {{page.banner-img}}
+    {% endif %}
 {% endfor %}
+---
 <div class="project">
 			<!--make author-links-->
                         <h5 class="author-heading">
