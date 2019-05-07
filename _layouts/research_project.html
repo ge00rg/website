@@ -1,11 +1,12 @@
----
-layout: page
----
 {% for page in site.pages %}
     {% if page.title=='Research' %}
         {% assign header-img=page.banner-img %}
     {% endif %}
 {% endfor %}
+---
+layout: page
+banner-img: header-img
+---
 <style>
 .feature-image header{
     background-image: url('{{ site.baseurl }}/assets/img/banners/{{ header-img }}')
