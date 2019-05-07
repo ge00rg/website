@@ -6,8 +6,8 @@ banner-img: "jobs_cut_scale.JPG"
 ---
 <h2><u>Current Projects</u></h2>
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
+  {% for project in site.research %}
+  <li><a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a></li>
+  {% endfor %}
 </ul>  
 <h2><u>Past Projects</u></h2>
