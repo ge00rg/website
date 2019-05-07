@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Hierarchical network model of decision making with a multiplexed neural code in the sensory circuit
+title: Hierarchical Network Model of Decision Making with a Multiplexed Neural Code in the Sensory Circuit
+permalink: /research/hierarchical_network_model_of_decision_making_with_a_multiplexed_neural_code_in_the_sensory_circuit
+force_current_projects: False
 image: "paola_diag.png"
 parents:
     - Behavior
