@@ -18,19 +18,15 @@ layout: default
 <!--banner and title -->
 <article class="feature-image">
     <header id="main">
-        <h1 align="left" id="{{ page.title | default: "" | cgi_escape }}" class="title">
-            {{ page.title }}
+        <h1 align="left" id="{{ 'Research' | default: "" | cgi_escape }}" class="title">
+            Research
         </h1>
-    
-        {% if page.subtitle %}
-            <h2 align="left" class="subtitle">{{ page.subtitle }}</h2>
-        {% endif %}
-      
     </header>
     <!-- content -->
     <section class="post-content">
         <div class="project">
 			<!--make author-links-->
+			<h3 class="project-heading">{{page.title}}</h3>
                         <h5 class="author-heading">
                             {% assign i=0 %}
                             {% assign authors=page.authors %}
