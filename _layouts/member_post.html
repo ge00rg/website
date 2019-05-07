@@ -6,7 +6,7 @@ layout: default
     <header id="main" style="background-image: url('{{ site.baseurl }}/assets/img/banners/{{ page.banner-img }}')">
         <a href="{{site.baseurl}}/team" class="back-button-wide">back</a>
         <h2 id="{{ page.title | cgi_escape }}" class="title member-title">{{ page.title }}</h2>
-        <a href="{{site.baseurl}}/team" class="back-button-narrow">back</a>
+        <a href="{{site.baseurl}}/team" class="back-button-narrow">back to Team</a>
         <p class="meta">
             {{ page.date | date: "%B %-d, %Y" }}
             {% if page.author %} - {{ page.author }}{% endif %}
