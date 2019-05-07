@@ -2,7 +2,7 @@
 layout: research_project
 title: Sensory Representations and Reinforcement Learning
 permalink: /research/sensory_representations_and_reinforcement_learning
-force_current_projects: False
+force_current_projects: "false"
 image: "mathias_diag2.png"
 parents:
     - Behavior
