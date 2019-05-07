@@ -26,10 +26,11 @@ banner-img: "jobs_cut_scale.JPG"
           {% for member in site.members %}
               {% if author==member.title %}
                   {% assign url=member.permalink %}
+                  {% assign position=member.position %}
               {% endif %}
           {% endfor %}
           {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-          <a href="{% unless member.position=='Alumni' %}{{site.baseurl}}{{url}}{% endunless %}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
+          <a href="{% unless position=='Alumni' %}{{site.baseurl}}{{url}}{% endunless %}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
           {% assign i=i | plus: 1 %}
       {% endfor %}
   </li>
