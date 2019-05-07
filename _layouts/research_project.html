@@ -2,11 +2,10 @@
 layout: page
 ---
 <div class="project">
-                        <h3 class="project-heading">{{page.title}}<a href="#top" class="b2t_link">Back to top</a></h3>
 			<!--make author-links-->
                         <h5 class="author-heading">
                             {% assign i=0 %}
-                            {% assign authors=project.authors %}
+                            {% assign authors=page.authors %}
                             {% for author in authors %}
                                 {% for member in site.members %}
                                     {% if author==member.title %}
@@ -20,14 +19,14 @@ layout: page
                         </h5>
 		    <!--project image-->
                     <div class="project-img-container">
-                        {% if project.image %}
+                        {% if page.image %}
                             <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
                         {% endif %}
         		<!-- make little author image floats-->
                         {% assign leftpix=-30 %}
-                        {% for author in project.authors %}
+                        {% for author in page.authors %}
                             {% for member in site.members %}
                                 {% if author==member.title %}
                                     {% assign url=member.permalink %}
@@ -44,6 +43,6 @@ layout: page
                         </div>
 			<!-- PROJECT CONTENT TEXT -->
                         <div class="project-text">
-                            {{project.content}}
+                            {{page.content}}
                         </div>
                     </div>
