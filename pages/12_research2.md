@@ -7,10 +7,21 @@ banner-img: "jobs_cut_scale.JPG"
 <h2><u>Current Projects</u></h2>
 <ul>
   {% for project in site.research %}
+  {% assign authors=project.authors %}
+  {% assign display_current='True' %}
+  {% for author in authors %}
+          {% for member in site.members %}
+              {% if author==member.title %}
+                  {% unless member.position='Alumni' %}
+                      {% assign display_current='True' %}
+                  {% endunless %}
+               {% endif %}
+          {% endfor %}
+      {% endfor %}
+  {% if display_current='True' %}
   <li>
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
-      {% assign authors=project.authors %}
       {% for author in authors %}
           {% for member in site.members %}
               {% if author==member.title %}
@@ -22,6 +33,7 @@ banner-img: "jobs_cut_scale.JPG"
           {% assign i=i | plus: 1 %}
       {% endfor %}
   </li>
+  {% endfor %}
   {% endfor %}
 </ul>  
 <h2><u>Past Projects</u></h2>
