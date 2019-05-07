@@ -18,27 +18,7 @@ banner-img: "jobs_cut_scale.JPG"
               {% endif %}
           {% endfor %}
       {% endfor %}
-      {% if display_current=='true' %}
-      <li>
-      <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
-      {% assign i=0 %}
-      {% for author in authors %}
-          {% for member in site.members %}
-              {% if author==member.title %}
-                  {% assign url=member.permalink %}
-              {% endif %}
-          {% endfor %}
-          {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-          <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
-          {% assign i=i | plus: 1 %}
-      {% endfor %}
-  </li>
-  {% endif %}
-  {{project.force_current_projects}}
-  {% if project.force_current_projects=='true' %}
-  asdasd
-  {% endif %}
-  {% if project.force_current_projects=='true' %}
+      {% if display_current=='true' and project.force_current_projects=='true' %}
       <li>
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
