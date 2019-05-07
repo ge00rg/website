@@ -2,7 +2,12 @@
 layout: page
 banner-img: {{pages.1_research.banner-img}}
 ---
-{{pages}}
+{% for page in site.pages %}
+p1
+{% endfor %}
+{% for page in pages %}
+p2
+{% endfor %}
 <div class="project">
 			<!--make author-links-->
                         <h5 class="author-heading">
