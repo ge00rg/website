@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Presynaptic Inhibition
+permalink: /research/presynaptic_inhibition
+force_current_projects: False
 image: "diag_laura.jpg"
 parents:
     - Inhibition
