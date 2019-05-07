@@ -2,7 +2,7 @@
 layout: research_project
 title: Functional Role of Different Types of Interneurons in Cortical Microcircuits
 permalink: /research/functional_role_of_different_types_of_interneurons_in_cortical_microcircuits
-force_current_projects: False
+force_current_projects: "false"
 image: "diag_loreen.jpg"
 parents:
     - Inhibition
