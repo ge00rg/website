@@ -17,6 +17,7 @@
     display: none;}
     .member-container{
     float: left;
+    padding-bottom: 50px;  
 }
 
 // for member images
@@ -33,9 +34,7 @@
     overflow: hidden;
     margin-top: -1.5em;
 }
-.member-container{
-    padding-bottom: 20px;    
-}
+
 // responsiveness for member-pages
 @media screen and (max-width: 768px){
     .back-button-wide{display: none;}
