@@ -47,9 +47,14 @@ layout: default
                         <h4 class="project-heading">{{project.title}}</h4>
                         <h5 class="author-heading">
                             {% assign i=0 %}
+                            {% assign j=0 %}
                             {% assign authors=project.authors %}
                             {% for author in authors %}
                                 {% unless author==page.title %}
+                                    {% if j==0 %}
+                                        in cooperation with
+                                        {% assign j=j|plus:1 %}
+                                    {% endif %}
                                     {% for member in site.members %}
                                         {% if author==member.title %}
                                             {% assign url=member.permalink %}
