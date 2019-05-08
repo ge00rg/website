@@ -35,7 +35,7 @@ layout: default
     {% assign namelist = page.title | split: " " %}
     {% assign first_name = namelist[0] %}
     {% assign fn_split=first_name|split:"" %}
-    {{fn_split[-1]}}
+    {% assign last_letter=fn_split[-1] %}
     
     {% assign researchcounter=0 %}
    
@@ -44,7 +44,7 @@ layout: default
             {% if author==page.title %}
                 {% assign researchcounter=researchcounter|plus:1 %}
                 {% if researchcounter==1 %}
-    <h3 style="padding-left:3%;"><u>{{first_name}}'s Research</u></h3>
+    <h3 style="padding-left:3%;"><u>{{first_name}}'{% unless last_letter=='s' %}s{% endunless %} Research</u></h3>
                 {% endif %}
                 <div class="project" style="padding-left: 3%">
                         <h4 class="project-heading">{{project.title}}</h4>
