@@ -31,11 +31,10 @@ layout: default
             {{page.content}}
         </div>
     </div>
-    </div>
-    <div class="member-container">
+
     {% assign namelist = page.title | split: " " %}
     
-    <h3>{{namelist[0]}}'s Research</h3>
+    <h3 style="padding-left:0;">{{namelist[0]}}'s Research</h3>
     {% for project in site.research %}
         {% for author in project.authors %}
             {% if author==page.title %}
