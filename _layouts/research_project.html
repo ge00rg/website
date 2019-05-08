@@ -55,7 +55,7 @@ layout: default
                         </h5>
 		    <!--project image-->
                     <div class="project-img-container">
-                        {% if page.image %}
+                        {% if page.image and is_mkp=='true' %}
                             <img src="{{site.baseurl}}/assets/img/research/{{page.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
