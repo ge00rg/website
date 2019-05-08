@@ -59,23 +59,7 @@ layout: default
                             <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
-                        {% endif %}
-        
-                        {% assign leftpix=-30 %}
-                        {% for author in project.authors %}
-                            {% for member in site.members %}
-                                {% if author==member.title %}
-                                    {% assign url=member.permalink %}
-                                    {% assign img=member.img %}
-                                {% endif %}
-                            {% endfor %}
-                        <div style="position:absolute; min-width:100px;">
-                            <a href="{{site.baseurl}}/{{url}}">
-                                <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/assets/img/members/{{img}}" style="left: {{leftpix}}px;">
-                            </a>
-                        </div>
-                            {% assign leftpix=leftpix|plus: 35 %}
-                            {% endfor %}
+                        {% endif %}        
                         </div>
                         <div class="project-text">
                             {{project.content}}
