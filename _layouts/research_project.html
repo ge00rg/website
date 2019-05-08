@@ -36,6 +36,8 @@ layout: default
                             {% assign i=0 %}
                             {% assign authors=page.authors %}
                             {% for author in authors %}
+			    {{author}}
+			    {% if author in site.members %}true{% endif %}
                                 {% for member in site.members %}
                                     {% if author==member.title %}
 					{% assign position=member.position %}
