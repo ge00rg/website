@@ -49,14 +49,16 @@ layout: default
                             {% assign i=0 %}
                             {% assign authors=project.authors %}
                             {% for author in authors %}
-                                {% for member in site.members %}
-                                    {% if author==member.title %}
-                                        {% assign url=member.permalink %}
-                                    {% endif %}
-                                {% endfor %}
-                                {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-                                <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
-                                {% assign i=i | plus: 1 %}
+                                {% unless author==page.title %}
+                                    {% for member in site.members %}
+                                        {% if author==member.title %}
+                                            {% assign url=member.permalink %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
+                                    <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
+                                    {% assign i=i | plus: 1 %}
+                                {% endunless %}
                             {% endfor %}
                         </h5>
                     <div class="project-img-container">
