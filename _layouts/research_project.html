@@ -63,8 +63,10 @@ layout: default
         		<!-- make little author image floats-->
                         {% assign leftpix=-30 %}
                         {% for author in page.authors %}
+			    {% assign is_mkp='false' %}
                             {% for member in site.members %}
                                 {% if author==member.title %}
+			            {% assign is_mkp='true' %}
 			            {% assign position=member.position %}
                                     {% if position !='Alumni' %}
                                             {% assign url=member.permalink %}
