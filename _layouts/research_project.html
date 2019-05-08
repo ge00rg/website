@@ -75,7 +75,7 @@ layout: default
                                 {% endif %}
                             {% endfor %}
                             <div style="position:absolute; min-width:100px;">
-                            <a href="{{site.baseurl}}/{{url}}">
+                            <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}">
                                 <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/assets/img/members/{{img}}" style="left: {{leftpix}}px;">
                             </a>
                             </div>
