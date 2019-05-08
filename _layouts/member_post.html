@@ -61,12 +61,12 @@ layout: default
                         </h5>
                     <div class="project-img-container">
                         {% if project.image %}
-                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img" style="padding-top: 0px;">
+                            <img src="{{site.baseurl}}/assets/img/research/{{project.image}}" class="project-img" style="padding-top: 0px; padding-left: 20px; float: right;">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 0px 20px 10px 0px; width: 350px;">
                         {% endif %}        
                         </div>
-                        <div class="project-text">
+                        <div class="project-text" style="margin-bottom: 15px;">
                             {{project.content}}
                         </div>
                     </div>
