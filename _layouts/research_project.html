@@ -78,8 +78,8 @@ layout: default
                             {% endfor %}
 			    {% unless is_mkp=='false' %}
                                 <div style="position:absolute; min-width:100px;">
-                                <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}">
-                                    <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/{% if is_mkp=='true' %}assets/img/members/{{img}}{% else %}{{site.emergency-img}}{% endif %}" style="left: {{leftpix}}px;">
+                                <a href="{{site.baseurl}}{{url}}">
+                                    <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/assets/img/members/{{img}}" style="left: {{leftpix}}px;">
                                 </a>
                                 </div>
                                 {% assign leftpix=leftpix|plus: 35 %}
