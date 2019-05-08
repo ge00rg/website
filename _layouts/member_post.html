@@ -34,7 +34,7 @@ layout: default
 
     {% assign namelist = page.title | split: " " %}
     {% assign first_name = namelist[0] %}
-    {% assign fn_split|split:"" %}
+    {% assign fn_split|split:"&nbsp;" %}
     {{first_name}}
     {{fn_split}}
     
