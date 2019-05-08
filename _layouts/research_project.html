@@ -49,7 +49,7 @@ layout: default
                                     {% endif %}
                                 {% endfor %}
 				{{project.override_links}}
-				{{project.override_links[author]}}
+				{{project.override_links.author}}
                                 {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
                                 <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}" class="author authorlink {% if is_mkp=='false' %}inactive{% endif %}" id="{{author}}_lnk">{{author}}</a>
                                 {% assign i=i | plus: 1 %}
