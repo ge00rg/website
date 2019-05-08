@@ -23,8 +23,10 @@ banner-img: "jobs_cut_scale.JPG"
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
       {% for author in authors %}
+	  {% assign is_mkp='false' %}
           {% for member in site.members %}
               {% if author==member.title %}
+	          {% assign is_mkp=='true' %}
                   {% assign position=member.position %}
                   {% if position !='Alumni' %}
                       {% assign url=member.permalink %}
@@ -34,7 +36,7 @@ banner-img: "jobs_cut_scale.JPG"
               {% endif %}
           {% endfor %}
           {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-         <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
+         <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}" class="author authorlink {%if is_mkp=='false' %}inactive{% endif %}" id="{{author}}_lnk">{{author}}</a>
           {% assign i=i | plus: 1 %}
       {% endfor %}
   </li>
