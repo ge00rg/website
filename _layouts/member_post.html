@@ -41,7 +41,7 @@ layout: default
             {% if author==page.title %}
                 {% assign researchcounter=researchcounter|plus:1 %}
                 {% if researchcounter==1 %}
-                     <h3 style="padding-left:0;">{{namelist[0]}}'s Research</h3>
+    <h3 style="padding-left:0;"><u>{{namelist[0]}}'s Research</u></h3>
                 {% endif %}
                 <div class="project">
                         <h4 class="project-heading">{{project.title}}</h4>
@@ -66,7 +66,7 @@ layout: default
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 0px 20px 10px 0px; width: 350px;">
                         {% endif %}        
                         </div>
-                        <div class="project-text" style="margin-bottom: 15px;">
+                        <div class="project-text" style="margin: 0 0 15px 0;">
                             {{project.content}}
                         </div>
                     </div>
