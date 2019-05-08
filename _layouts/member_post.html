@@ -34,10 +34,15 @@ layout: default
 
     {% assign namelist = page.title | split: " " %}
     
-    <h3 style="padding-left:0;">{{namelist[0]}}'s Research</h3>
+    {% assign researchcounter=0 %}
+   
     {% for project in site.research %}
         {% for author in project.authors %}
             {% if author==page.title %}
+                {% assign researchcounter=researchcounter|plus:1 %}
+                {% if researchcounter==1 %}
+                     <h3 style="padding-left:0;">{{namelist[0]}}'s Research</h3>
+                {% endif %}
                 <div class="project">
                         <h4 class="project-heading">{{project.title}}</h4>
                         <h5 class="author-heading">
