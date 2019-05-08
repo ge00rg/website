@@ -33,6 +33,9 @@
     overflow: hidden;
     margin-top: -1.5em;
 }
+.member-container{
+    padding 0 0 10px 0;    
+}
 // responsiveness for member-pages
 @media screen and (max-width: 768px){
     .back-button-wide{display: none;}
