@@ -66,7 +66,7 @@ layout: default
                                         {% endif %}
                                     {% endfor %}
                                     {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-                                    <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}" class="author authorlink {% if is_mkp=='false' %}inactive{% endif %}" id="{{author}}_lnk">{{author}}</a>
+                                    <a href="{% if site.data.external_researchers[author] %}{{site.data.external_researchers[author]}}{% elsif is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}" class="author authorlink {% uless is_mkp=='true' or site.data.external_researchers[author] %}inactive{% endunless %}" id="{{author}}_lnk">{{author}}</a>
                                     {% assign i=i | plus: 1 %}
                                 {% endunless %}
                             {% endfor %}
