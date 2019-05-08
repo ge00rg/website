@@ -26,7 +26,7 @@ banner-img: "jobs_cut_scale.JPG"
 	  {% assign is_mkp='false' %}
           {% for member in site.members %}
               {% if author==member.title %}
-	          {% assign is_mkp=='true' %}
+	          {% assign is_mkp='true' %}
                   {% assign position=member.position %}
                   {% if position !='Alumni' %}
                       {% assign url=member.permalink %}
