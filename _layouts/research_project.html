@@ -55,7 +55,7 @@ layout: default
                         </h5>
 		    <!--project image-->
                     <div class="project-img-container">
-                        {% if page.image and is_mkp=='true' %}
+                        {% if page.image %}
                             <img src="{{site.baseurl}}/assets/img/research/{{page.image}}" class="project-img">
                         {% else %}
                             <img src="{{site.baseurl}}/{{site.emergency-img}}" style="float: left; padding: 20px 20px 10px 0px; width: 350px;">
@@ -76,7 +76,7 @@ layout: default
                             {% endfor %}
                             <div style="position:absolute; min-width:100px;">
                             <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}">
-                                <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/assets/img/members/{{img}}" style="left: {{leftpix}}px;">
+                                <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/{% if is_mkp=='true' %}assets/img/members/{{img}}{% else %}{{site.emergency-img}}{% endif %}" style="left: {{leftpix}}px;">
                             </a>
                             </div>
                             {% assign leftpix=leftpix|plus: 35 %}
