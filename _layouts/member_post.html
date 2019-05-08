@@ -41,6 +41,7 @@ layout: default
             {% if author==page.title %}
                 {% assign researchcounter=researchcounter|plus:1 %}
                 {% if researchcounter==1 %}
+                {{namelist[0][-1]}}
     <h3 style="padding-left:3%;"><u>{{namelist[0]}}'s Research</u></h3>
                 {% endif %}
                 <div class="project" style="padding-left: 3%">
