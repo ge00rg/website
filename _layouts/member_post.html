@@ -31,7 +31,7 @@ layout: default
             {{page.content}}
         </div>
     </div>
-    {% assign namelist = page.title | split:&nbsp; %}
+    {% assign namelist = page.title | split: " " %}
     {% for n in namelist %}
     {{n}}
     {% endfor %}
