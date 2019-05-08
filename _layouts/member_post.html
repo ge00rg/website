@@ -32,7 +32,9 @@ layout: default
         </div>
     </div>
     {% assign namelist = page.title | split:&nbsp; %}
-    {{namelist}}
+    {% for n in namelist %}
+    {{n}}
+    {% endfor %}
     <h3>{{namelist[0]}}'s Research</h3>
     {% for project in site.research %}
         {% for author in project.authors %}
