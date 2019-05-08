@@ -51,8 +51,8 @@ layout: default
 				{{site.data.external_researchers}}
 				{{page.override_links|jsonify}}
 				{% assign lnks=page.override_links|jsonify %}
-				{{site.data.external_researchers["Alex Notamember"]}}
-				{{lnks["Alex Notamember"]}}
+				file:{{site.data.external_researchers["Alex Notamember"]}}
+				yaml:{{lnks["Alex Notamember"]}}
                                 {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
                                 <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}" class="author authorlink {% if is_mkp=='false' %}inactive{% endif %}" id="{{author}}_lnk">{{author}}</a>
                                 {% assign i=i | plus: 1 %}
