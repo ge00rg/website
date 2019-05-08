@@ -32,6 +32,7 @@ layout: default
         </div>
     </div>
     {% assign namelist = page.title | split:&nbsp; %}
+    {{namelist}}
     <h3>{{namelist[0]}}'s Research</h3>
     {% for project in site.research %}
         {% for author in project.authors %}
