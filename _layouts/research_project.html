@@ -76,12 +76,14 @@ layout: default
                                     {% assign img=member.img %}
                                 {% endif %}
                             {% endfor %}
-                            <div style="position:absolute; min-width:100px;">
-                            <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}">
-                                <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/{% if is_mkp=='true' %}assets/img/members/{{img}}{% else %}{{site.emergency-img}}{% endif %}" style="left: {{leftpix}}px;">
-                            </a>
-                            </div>
-                            {% assign leftpix=leftpix|plus: 35 %}
+			    {% unless is_mkp=='false' %}
+                                <div style="position:absolute; min-width:100px;">
+                                <a href="{% if is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}">
+                                    <img class="author speakerfloat" id="{{author}}_flt" src="{{site.baseurl}}/{% if is_mkp=='true' %}assets/img/members/{{img}}{% else %}{{site.emergency-img}}{% endif %}" style="left: {{leftpix}}px;">
+                                </a>
+                                </div>
+                                {% assign leftpix=leftpix|plus: 35 %}
+			    {% endunless %}
                             {% endfor %}
                         </div>
 			<!-- PROJECT CONTENT TEXT -->
