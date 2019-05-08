@@ -36,10 +36,10 @@ layout: default
                             {% assign i=0 %}
                             {% assign authors=page.authors %}
                             {% for author in authors %}
-			    {{author}}
-			    {% if site.members contains author %}true{% else %}flase{% endif %}
+				{% assign is_mkp='false' %}
                                 {% for member in site.members %}
                                     {% if author==member.title %}
+				        {% assign is_mkp='true' %}
 					{% assign position=member.position %}
 				        {% if position !='Alumni' %}
                                             {% assign url=member.permalink %}
@@ -48,6 +48,7 @@ layout: default
 				        {% endif %}
                                     {% endif %}
                                 {% endfor %}
+				{% if is_mkp=='false' %}{% assign url="javascript:;" %}{% endif %}
                                 {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
                                 <a href="{{site.baseurl}}{{url}}" class="author authorlink" id="{{author}}_lnk">{{author}}</a>
                                 {% assign i=i | plus: 1 %}
