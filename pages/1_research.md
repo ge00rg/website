@@ -73,7 +73,7 @@ banner-img: "jobs_cut_scale.JPG"
               {% endif %}
           {% endfor %}
           {% unless i==0 %}<span style="color: DarkGray;"> ,</span>{% endunless %}
-          <a href="{{site.baseurl}}{{url}}" class="author authorlink " id="{{author}}_lnk">{{author}}</a>
+          <a href="{% if site.data.external_researchers[author] %}{{site.data.external_researchers[author]}}{% elsif is_mkp=='true' %}{{site.baseurl}}{{url}}{% else %}javascript:;{% endif %}" class="author authorlink {%unless is_mkp=='true' or site.data.external_researchers[author] %}inactive{% endunless %}" id="{{author}}_lnk">{{author}}</a>
           {% assign i=i | plus: 1 %}
       {% endfor %}
   </li>
