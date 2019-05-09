@@ -12,8 +12,11 @@
 .publications .extender{
     display:inline; 
     float: right;}
- .publications-h{
+.publications-h{
      padding-left: 3%;
+}
+@media screen and (max-width: 768px){
+       .publications-h{font-size: 1.2em;}
 }
 
 // styling for links in publications table -->publications.scss
