@@ -67,11 +67,11 @@ layout: default
 <script>
 $(document).ready(function(){
 $( ".excerpt" ).each(function( ) {
-    if($(this).height()/parseFloat($("body").css("font-size")) < 7.1){
+    if($(this).height()/parseFloat($("body").css("line-height")) < 7.1){
         $(this).next().css("display", "none");
     }
     $(this).addClass("truncate");
-    if($(this).height()/parseFloat($("body").css("font-size")) < 1){
+    if($(this).height()/parseFloat($("body").css("line-height")) < 1){
         $(this).css("display", 'none');
     }
 }); 
