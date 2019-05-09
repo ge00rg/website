@@ -51,3 +51,7 @@
   /* bg color = bg color under block */
   background: white;
 }
+
+@media screen and (min-width: 860px) {
+    .excerpt {font-size: 0.8em;}
+}
