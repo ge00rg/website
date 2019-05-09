@@ -53,5 +53,9 @@
 }
 
 @media screen and (max-width: 750px) {
-    .excerpt {font-size: 0.8em;}
+    .excerpt {line-height: 1.0em;}
+            .truncate {
+                        line-height: 5.0em;
+                        /* max-height = line-height (1.2) * lines max number (3) */
+                        max-height: 6.0em; }
 }
