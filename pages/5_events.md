@@ -92,7 +92,7 @@ banner-img: "events_cut_scale.JPG"
 	      
 	      if (year > year_old){
 	          table_handle = 'future_'+year;
-	          $('#events').append("<h3 class="events-h">"+year+"</h3>");
+	          $('#events').append("<h3 class='events-h'>"+year+"</h3>");
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden;display: table!important;margin-top:2em;margin-bottom:2em;'></table>");
 	          year_old = year;
 	      }
@@ -122,7 +122,7 @@ banner-img: "events_cut_scale.JPG"
 	      
 	      if (year < year_old){
 	          table_handle = 'past_'+year;
-	          $('#events').append("<h3 class="events-h">"+year+"</h3>");
+	          $('#events').append("<h3 class='events-h'>"+year+"</h3>");
                   $('#events').append("<table id='"+table_handle+"' class='talks' style='overflow: hidden; display: table!important;margin-top:2em;margin-bottom:2em;'></table>");
 	          year_old = year;
 	      }
