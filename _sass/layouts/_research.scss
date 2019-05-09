@@ -67,7 +67,7 @@ a.head:hover{
 //responsiveness for member-images next to projects
 @media screen and (max-width: 780px) {
     .speakerfloat{margin-left: 30px;}
-    .project-text{clear: both;}
+    .project-text{clear: both; font-size: 0.8em;}
 }
 @media only screen and (max-width: 600px) {
     .speakerfloat {
