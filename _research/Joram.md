@@ -3,7 +3,7 @@ layout: research_project
 title: Perceptual Decision Making
 permalink: /research/perceptual_decision_making
 force_current_projects: "false"
-force_past_projects: "true"
+force_past_projects: "false"
 image: "joram_diag.png"
 parents:
     - Plasticity
