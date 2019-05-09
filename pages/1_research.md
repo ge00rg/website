@@ -57,7 +57,7 @@ banner-img: "jobs_cut_scale.JPG"
               {% endif %}
           {% endfor %}
       {% endfor %}
-      {% if display_current=='false' and project.force_current_projects!='true' %}
+      {% if project.force_past_projects=='true' or display_current=='false' and project.force_current_projects!='true' %}
       <li>
       <a href="{{site.baseurl}}/{{project.permalink}}">{{project.title}}</a>
       {% assign i=0 %}
