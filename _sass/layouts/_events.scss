@@ -43,7 +43,7 @@ display: -webkit-box;
     color: $text-color;
 }
 .loc-span{
-    white-space: pre;
+    white-space: pre-wrap;
     text-transform: none;
     color: $text-color;
     float: left;
