@@ -75,6 +75,9 @@ $( ".excerpt" ).each(function( ) {
         $(this).css("display", 'none');
 	$(this).next().css("display", "none");
     }
+    if($(this).height()/parseFloat($("body").css("line-height")) > 7.3){
+        $(this).next().css("display", "none");
+    }
 }); 
   
 $(".txtcol").click(function(){
