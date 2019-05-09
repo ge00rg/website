@@ -71,7 +71,7 @@ $( ".excerpt" ).each(function( ) {
         $(this).next().css("display", "none");
     }
     $(this).addClass("truncate");
-    if($(this).height()/parseFloat($("body").css("line-height")) < 1){
+    if($(this).height()/parseFloat($("body").css("font-size")) < 1){
         $(this).css("display", 'none');
     }
 }); 
