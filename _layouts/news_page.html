@@ -68,7 +68,7 @@ layout: default
 $(document).ready(function(){
 $( ".excerpt" ).each(function( ) {
     $(this).addClass("truncate");
-    if($(this).height()/parseFloat($("truncate").css("line-height")) > 4.75){
+    if($(this).height()/parseFloat($("truncate").css("line-height")) > 800){
         $(this).next().css("display", "none");
     }
     if($(this).height()/parseFloat($("body").css("font-size")) < 1){
