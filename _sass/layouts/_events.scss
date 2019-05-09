@@ -35,6 +35,13 @@ display: -webkit-box;
 -webkit-box-orient: vertical;
 }
 
+.events-h{
+     padding-left: 0.8em;
+}
+@media screen and (max-width: 768px){
+       .events-h{font-size: 1.2em;}
+}
+
 // elements used to manage space and style event-postings
 .speaker-span{
     font-size: 1.3em;
