@@ -29,7 +29,7 @@ banner-img: "publications_cut_scale.JPG"
 {% endfor %}
 
 {% if preprints=="true" %}
-<h3>Preprints</h3>
+<h3 class="publications-h">Preprints</h3>
 <table class="publications">
 {% for paper in site.data.publications %}
 {% if paper.preprint=="true" %}
@@ -40,7 +40,7 @@ banner-img: "publications_cut_scale.JPG"
 {% endif %}
 
 {% for i in years %}
-<h3>{{i}}</h3>
+<h3 class="publications-h">{{i}}</h3>
 <table class="publications">
 {% for paper in site.data.publications %}
 {% unless paper.preprint=="true" %}
