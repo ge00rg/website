@@ -124,24 +124,21 @@ The  existence  of  specialized  mechanisms  for  burst  generation  in  pyramid
 `layout` should always be set to 'research_project'. The `title` is obviously the title of the project and determines the heading and name of the page. `permalink` determines what the url of the project site is going to be. Please always incluse `/research/` in front of whatever name you chose (and chose a unique name!) in oder to avoid several sites getting the same url (in which case only one of them will exist).
 
 By default, a project will be displayed under the "Current Projects" section, unless all of its authors (see below) are Alumni (see [Team](#team)), in which case they will appear under "Past Projects".
-Setting `force_current_projects` to `"true"` (**the quotation marks are mandatory!**) will make it appear under "Current Projects" regardless of the former, and setting `force_past_projects` to `"true"` will make it appear under "Past Projects" regardless of the latter.
+Setting `force_current_projects` to `"true"` (**the quotation marks are mandatory!**) will make it appear under "Current Projects" regardless of the former, and setting `force_past_projects` to `"true"` will make it appear under "Past Projects" regardless of the latter. These flags are optional and only do something if set to true (setting them to false has the same effect as setting them to anything else except true.
 
-`image` holds the name of the image displayed with the project. All project images should be placed in the `assets/img/research` folder.
+`image` holds the name of the image displayed with the project. All project images should be placed in the `assets/img/research` folder. If no image is provided the emergency-image specified in `_config.yml` will be used.
 
 `authors` is a list of authors that work on the project. **These names should exactly correspond with the `title` entry of a file in the `_members` folder**, or in other words, exactly match a name of a member of the group as used on the team page.
+If an author is Alumni, his/her link will go to the Alumni-section of the members page. If an author is external, i.e. the name does not appear in any of the files in `_members`, the link will no go anywhere by default. Optionally, `_data/external_researchers.json` contains a dictionary that maps names to URLs. If you want an external researcher's name to link to his/her page, create an entry `"NAME": "URL"` for them there. 
 
 The markdown contains a description of the project. You can use all markup-features in order to format your research-page to you liking.
 
 To create a new project, just create a new file with this structure in the `_research/` folder.
 
-### Navigation Categories (Research Headings)
-
-To change the research project categories 'Inhibition', 'Plasticity' and 'Behavior', edit  the `headings` entry of `pages/1_research.md`. Do not forget the whitespace before the '-'! Note that this is a far reaching change as you then have to also change the parents of all research projects to reflect the change you made here.
-
 <a name="team"></a>
 ## 5. Team
 
-### Member Entries
+### Member Pages
 
 For each team member there is a file in `_members`. All of these have a YAML header that looks like this:
 
@@ -158,15 +155,22 @@ tel: +49 123456789
 ---
 ```
 
-The layout is always set to "member_post", the `title` is the name of the person. The `image` entry should be set the name of the desired image (which should be put into the folder `assets/img/members`). These images also should have a height to width ratio of approximately 10:9 (all the current ones are 1000x900px). The `position` entry denotes the position of the person within the group. Currently available are 'Principal Investigator', 'Secretary', 'Postdoctoral Fellow', 'PhD Student', 'Master Student' and 'Alumnus' (set under `position-order` in `pages/2_team.md`). This entry determines the position title displayed under the member's name, as well as where the member will be displayed, as they are displayed in `position-order`, i.e. first the Principal Investigator, then the Secretary, then all Postdoctorall Fellows and so on. If a position is used that is not in the list, the member will be displayed last, in aplhabetical order, unless that position is "Aluimni" - in that case the member will appear in the Alumni-section. If the position exists in the list, it shoud be matched exactly here. The `permalink` denotes the link under which this site is going to be reachable, i.e. `sprekelerlab.net/denis/` in this case. `room`, `tel` and `email` are optional and self-explanatory.
+The `layout` is always set to "member_post", the `title` is the name of the person. 
+The `image` entry should be set the name of the desired image (which should be put into the folder `assets/img/members`). These images also should have a height to width ratio of approximately 10:9 (all the current ones are 1000x900px). 
+
+The `position` entry denotes the position of the person within the group. Currently available are 'Principal Investigator', 'Secretary', 'Postdoctoral Fellow', 'PhD Student', 'Master Student' and 'Alumnus' (set under `position-order` in `pages/2_team.md`). This entry determines the position title displayed under the member's name, as well as where the member will be displayed, as they are displayed in `position-order`, i.e. first the Principal Investigator, then the Secretary, then all Postdoctorall Fellows and so on. If a position is used that is not in the list, the member will be displayed last, in aplhabetical order, unless that position is "Alumni" - in that case the member will appear in the Alumni-section. If the position exists in the list, it shoud be matched exactly here. 
+
+The `permalink` denotes the link under which this site is going to be reachable, i.e. `sprekelerlab.net/denis/` in this case. **Permalinks need to be unique, otherwise only one of multiple pages with the same url will exist!** So if two members of the lab have the same name, they will still need to have different `permalink` entries.
+
+`room`, `tel` and `email` are optional and self-explanatory.
 
 The markdown part afterwards is the short bio of the person in question and is later displayed on their page.
 
 ### Alumni
-One special position is Alumni (yes, I know that the proper singular is Alumnus/Alumna). If `position: Alumnus` is specified, the member does not appear with all the others as described above, but instead at the very bottom in a special Alumni-grid. When edition the position order (see next section) it is crucial that "Alumni" is **not** part of that list!
+One special position is Alumni (yes, I know that the proper singular is Alumnus/Alumna). If `position: Alumni` is specified, the member does not appear with all the others as described above, but instead at the very bottom in a special Alumni-grid.
 
 ### Position Order
-To change the order of positions within the group, edit `position-order` in `pages/2_team.md`. It is also possible to add or remove position entries. Everything not on this list is displayed last in alphabetical order.
+To change the order of positions within the group, edit `position-order` in `pages/2_team.md`. It is also possible to add or remove position categories. Everything not on this list is displayed last in alphabetical order, but before the Alumni.
 
 <a name="publications"></a>
 ## 6. Publications
