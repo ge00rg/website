@@ -1,7 +1,7 @@
 <div class="row">
     {% for position in page.position-order %}
         {% for member in site.members %}
-            {% if member.position == position %}
+            {% if member.position == position and position != "Alumni" %}
                 <div class="column">
                     <figure>
                         <a href="{{ site.baseurl }}{{ member.url }}" data-keyboard="true">
