@@ -34,7 +34,7 @@ You don't have to read all of this if you want to make a change or contribution 
 <a name="general"></a>
 ## 1. General
 
-The website is built using **Jekyll**, a Ruby based static website generator asn is based off the Type-on-Strap template. It makes use of **YAML**, **markdown** and **LiquidScript** to generate websites. The use of YAML and markdown makes it easy to edit and create content for the website without coding explicit html.
+The website is built using **Jekyll**, a Ruby based static website generator and is based off the Type-on-Strap template. It makes use of **YAML**, **markdown** and **Liquid** to generate websites. The use of YAML and markdown makes it easy to edit and create content for the website without coding explicit html while giving you many freedoms in designing personal/research-project-pages.
 
 You can find the documentation of Jekyll [here](https://jekyllrb.com/docs/), the YAML documentation [here](https://jekyllrb.com/docs/front-matter/) and the LiquidScript documentation [here](https://jekyllrb.com/docs/liquid/).
 
@@ -50,7 +50,7 @@ permalink: /denis/
 room: MAR 5.014
 email: denis.alevi@bccn-berlin.de
 ---
-Denis Alevi studied Physics at Heidelberg University, where he worked on
+Denis studied Physics at Heidelberg University, where he worked on
 Neuromorphic Hardware for his bachelor's thesis. Currently he is pursuing a
 master's degree in Computational Neuroscience at the Bernstein Center in Berlin
 and joined the lab in 2017. For his master's thesis he is trying to
@@ -63,7 +63,7 @@ on graphics processing units and has developed the open source software
 Brian2CUDA.
 ```
 
-The part between the '---' characters is the YAML header. It allows to define variables that are later used to generate a page. The variable names come before the colon and the value that they hold come after. These are going to be used by Jekyll to automatically create Denis' member page in this example. It is important to use the correct syntax here - `variable: value` for simple variables. If the vaule contains certian reserved characters like for example "-", the whole value should be enclosed in quotation marks. Another syntactic feature of YAML that we use are lists. They are structured as follows:
+The part between the '---' characters is the YAML header. It allows to define variables that are later used to generate a page. The variable names come before the colon and the value that they hold come after. These are going to be used by Jekyll to automatically create Denis' member page in this example. It is important to use the correct syntax here - `variable: value` for simple variables. If the vaule contains certian reserved characters like for example "-", the whole value should be enclosed in quotation marks. In general, if you experience an unexpected behavior after setting a variable, see if enclosing it in quotation-marks fixes the error. Another syntactic feature of YAML that we use are lists. They are structured as follows:
 ```
 list:
     - item1
@@ -72,7 +72,7 @@ list:
 ```
 It is crucial that there is always a whitespace after the "-", otherwise this will not be recognized as a list.
 
-The part below is markdown, which is basically just text, but where you can also insert links and images and tables and so on. We are mostly using it for text and for the fact that when html is generated from it, formatting is preserved.
+The part below is markdown, which is basically just text, but where you can also insert links and images and tables and so on. We are mostly using it for text and for the fact that when html is generated from it, formatting is preserved. Feel free to use it for the inclusion of tables and images into your personal pages and research projects.
 
 **Important formatting note**: As mentioned above, certain characters within a YAML header are reserved and will not be displayed correctly when used, or even break the file structure and cause deployment of the site to fail. In such cases, check if the error goes away by removing special characters. If it does, there are various ways to prevent this kind of behavior, the simplest one being to enclose the value in question in ""-quotes. Some other ways are outlined [here](https://interviewbubble.com/solved-how-to-escape-indicator-characters-or-in-yaml-escaping-colons-in-yaml/), particularily if you want to use line breaks for some reason. However, tread carefully and always test, because Jekyll does not fully support all of these.
 
@@ -81,7 +81,7 @@ If you add new images, please use compression (I used [this](https://tinypng.com
 <a name="banner"></a>
 ## 2. Banner Images
 
-For all except the home page the banner images should be located in `assets/img/banners` . Then we need to indicate that we want to use a particular image in that folder in the file corresponding to the page we want to use it on. All page-files are located in the folder `pages`. Now if we want to change the banner of the news page for example, we open `news.md` and edit (or add, if it doesn't exist) the line
+For all except the home page the banner images should be located in `assets/img/banners` . Then we need to indicate that we want to use a particular image in that folder in the file corresponding to the page we want to use it on. All page-files (except for "home") are located in the folder `pages`. Now if we want to change the banner of the news page for example, we open `5_news.md` and edit (or add, if it doesn't exist) the line
 
 ```yaml
 banner-img: "news_image.JPG"
@@ -89,7 +89,7 @@ banner-img: "news_image.JPG"
 
 where news_image.JPG is the desired image that we put in the `assets/img/banners` folder.
 
-For the home page, to change the image we edit the `banner-img ` entry of `index.html` the same way described above.
+For the home page, to change the image we edit the `banner-img ` entry of `index.html` (located in the main directory) the same way as described above.
 
 <a name="mission"></a>
 ## 3. Mission Statement
@@ -105,26 +105,32 @@ All research projects are located in the folder `_research/`. They are then disp
 
 ```yml/markdown
 ---
-layout: page
-title: Burst  Control  in  Cortical  Circuits 
+layout: research_project
+title: Burst  Control  in  Cortical  Circuits
+permalink: /research/burst_control_in_cortical_circuits
+force_current_projects: "false"
+force_past_projects: "false"
 image: "diag_filip.jpg"
-parents:
-    - Inhibition
-    - Plasticity
 authors:
     - Filip Vercruysse
+    - Laura Bella Naumann
+    - Alex Notamember
+    - Loreen Hertäg
 ---
 The  existence  of  specialized  mechanisms  for  burst  generation  in  pyramidal  cells  (PCs)  suggests  that  bursts  are  likely  to  be  an  important  temporal  feature  of  neural  signals.  In L5  PCs  bursts  occur  at  a  low,  but  consistent  rate,  and  are  thought  to  arise  from  active  dendritic  processes.  Given  that  burst  activity  relies  on  dendritic  threshold  mechanisms,  it  appears  likely  that  low  burst  activity  require  homeostatic  control,  but  the  underlying  mechanisms  are  not  resolved.  In  this  research  project  we  model  a  biologically  inspired  circuit  diagram  of  a  self-organized  microcircuit  with  different  inhibitory  cell  types  and  plasticity  rules  to  control  the  burst  and  population  rate  of  PCs.  Our  work  shows  that  inhibitory  plasticity  rules  may  serve  as  building  blocks  to  self-organise  complex  network  architectures  and  allows  us  to  investigate  coding  properties  of  bursting  units  without  the  need  for  tuning  of  input  or  noise  levels. 
   
 ```
 
-`layout` should always be set to 'page'. The `title` is obviously the title of the project. `image` holds the name of the image displayed with the project. All project images should be placed in the `assets/img/research` folder.
+`layout` should always be set to 'research_project'. The `title` is obviously the title of the project and determines the heading and name of the page. `permalink` determines what the url of the project site is going to be. Please always incluse `/research/` in front of whatever name you chose (and chose a unique name!) in oder to avoid several sites getting the same url (in which case only one of them will exist).
 
-`parents` is a list of either one or two items from the categories listed in the file `pages/1_research.md` under headings: 'Inhibition', 'Plasticity' and 'Behavior'. Please note that a poject cannot have both 'Inhibition' and 'Behavior' as parents. They serve to subdivde the project page into these four subcategories; failing to match one of these keywords means that the project will not be displayed.
+By default, a project will be displayed under the "Current Projects" section, unless all of its authors (see below) are Alumni (see [Team](#team)), in which case they will appear under "Past Projects".
+Setting `force_current_projects` to `"true"` (**the quotation marks are mandatory!**) will make it appear under "Current Projects" regardless of the former, and setting `force_past_projects` to `"true"` will make it appear under "Past Projects" regardless of the latter.
 
-`authors` is a list of authors that work on the project. These names should exactly correspond with the `title` entry of a file in the `_members` folder, or in other words, exactly match a name of a member of the group as used on the team page.
+`image` holds the name of the image displayed with the project. All project images should be placed in the `assets/img/research` folder.
 
-The markdown contains a description of the project.
+`authors` is a list of authors that work on the project. **These names should exactly correspond with the `title` entry of a file in the `_members` folder**, or in other words, exactly match a name of a member of the group as used on the team page.
+
+The markdown contains a description of the project. You can use all markup-features in order to format your research-page to you liking.
 
 To create a new project, just create a new file with this structure in the `_research/` folder.
 
