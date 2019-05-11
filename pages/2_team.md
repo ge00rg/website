@@ -9,7 +9,7 @@ position-order:
     - Postdoctoral Researcher
     - PhD Student
     - Master Student
-    - Alumnus
+    - Alumni
 ---
 
 {% include membergrid.html %}
