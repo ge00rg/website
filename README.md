@@ -103,7 +103,7 @@ To change the Mission Statement, open `_config.yml` and edit the line `text: `.
 
 All research projects are located in the folder `_research/`. They are then displayed on the research page onw below the other. Let us look at an example:
 
-```yml/markdown
+```yaml/markdown
 ---
 layout: research_project
 title: Burst  Control  in  Cortical  Circuits
