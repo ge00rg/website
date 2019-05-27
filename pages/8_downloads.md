@@ -2,7 +2,7 @@
 layout: page
 title : Downloads 
 permalink: /downloads/
-banner-img: "data.jpeg"
+banner-img: "data_alternative.jpeg"
 ---
 ## Grid Score
 
