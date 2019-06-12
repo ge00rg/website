@@ -2,7 +2,7 @@
 layout: page
 title : Team
 permalink: /team/
-banner-img: "team_cut_scale.JPG"
+banner-img: "IMG_6045 2.jpeg"
 position-order:
     - Principal Investigator
     - Secretary
